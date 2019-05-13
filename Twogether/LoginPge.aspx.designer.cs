@@ -10,7 +10,7 @@
 namespace Twogether {
     
     
-    public partial class SiteMaster {
+    public partial class LoginPge {
         
         /// <summary>
         /// Controle head.
@@ -22,21 +22,12 @@ namespace Twogether {
         protected global::System.Web.UI.WebControls.PlaceHolder head;
         
         /// <summary>
-        /// Controle ScriptManager.
+        /// Controle frmLogin.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.ScriptManager ScriptManager;
-        
-        /// <summary>
-        /// Controle MainContent.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.HtmlControls.HtmlForm frmLogin;
     }
 }

@@ -21,10 +21,10 @@ namespace Twogether
         {
             // Determine current view
             var isMobile = WebFormsFriendlyUrlResolver.IsMobileView(new HttpContextWrapper(Context));
-            CurrentView = isMobile ? "Mobile" : "Desktop";
+            CurrentView = isMobile ? "Desktop" : "Desktop";
 
             // Determine alternate view
-            AlternateView = isMobile ? "Desktop" : "Mobile";
+            AlternateView = isMobile ? "Desktop" : "Desktop";
 
             // Create switch URL from the route, e.g. ~/__FriendlyUrls_SwitchView/Mobile?ReturnUrl=/Page
             var switchViewRouteName = "AspNet.FriendlyUrls.SwitchView";

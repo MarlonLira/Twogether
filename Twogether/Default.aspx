@@ -27,7 +27,7 @@
                     <div class="tab-content custom-menu-content">
                         <div id="Home" class="tab-pane in active notika-tab-menu-bg animated flipInX">
                             <ul class="notika-main-menu-dropdown">
-                                <li><a href="index.html">Dashboard One</a>
+                                <li><a href="/Views/Error/404.aspx">Dashboard One</a>
                                 </li>
                                 <li><a href="index-2.html">Dashboard Two</a>
                                 </li>
