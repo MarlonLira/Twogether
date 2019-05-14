@@ -10,7 +10,7 @@
 namespace Twogether.Views.Error {
     
     
-    public partial class Error {
+    public partial class _404 {
         
         /// <summary>
         /// Controle head.

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Twogether._Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebMst.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Twogether.Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <!-- Main Menu area start-->
@@ -133,7 +133,7 @@
                                 </li>
                                 <li><a href="login-register.html">Login Register</a>
                                 </li>
-                                <li><a href="404.html">404 Page</a>
+                                <li><a href="/Views/Error/404.aspx">404 Page</a>
                                 </li>
                             </ul>
                         </div>

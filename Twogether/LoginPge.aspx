@@ -1,14 +1,12 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LoginPge.aspx.cs" Inherits="Twogether.LoginPge" %>
+<%@ Import Namespace="System.Web.Optimization" %>
 
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-
     <asp:PlaceHolder runat="server" ID="head">
-        
+        <%: Scripts.Render("~/bundles/js") %>
         <%: Styles.Render("~/bundles/css") %>
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
@@ -103,3 +101,4 @@
     </form>
 </body>
 </html>
+
