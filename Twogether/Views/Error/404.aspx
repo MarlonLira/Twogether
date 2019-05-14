@@ -21,8 +21,8 @@
                     Tente verificar o URL em busca de um erro, e em seguida, 
                     pressione o botão de atualização no seu navegador.</p>
 
-                <a href="\Default.aspx" class="btn" style="color:lightgrey; background-color:darkred !important">Dashboard</a>
-                <a href="#" class="btn error-btn-mg" style="color:lightgrey; background-color:darkred !important">Reportar Problema</a>
+                <a href="\Default.aspx" class="btn" style="color:lightgrey; background-color:#F44336 !important">Dashboard</a>
+                <a href="#" class="btn error-btn-mg" style="color:lightgrey; background-color:#F44336 !important">Reportar Problema</a>
             </div>
         </div>
     </form>

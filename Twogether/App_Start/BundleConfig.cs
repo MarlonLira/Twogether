@@ -35,10 +35,17 @@ namespace Twogether {
                             "~/Scripts/plugins.js",
                             "~/Scripts/chat/moment.min.js",
                             "~/Scripts/main.js",
-                            "~/Scripts/tawk-chat.js"
+                            "~/Scripts/tawk-chat.js",
+                            "~/Scripts/wizard/jquery.bootstrap.wizard.min.js",
+                            "~/Scripts/wizard/wizard-active.js"
                             ).IncludeDirectory("~/Scripts", ".js"));
 
-            bundles.Add(new StyleBundle("~/bundles/css").Include(
+            bundles.Add(new ScriptBundle("~/bundles/wizard").Include(
+                "~/Scripts/wizard/jquery.bootstrap.wizard.min.js",
+                "~/Scripts/wizard/wizard-active.js"
+                ));
+
+           bundles.Add(new StyleBundle("~/bundles/css").Include(
                             "~/Content/bootstrap.min.css",
                             "~/Content/font-awesome.min.css",
                             "~/Content/owl.carousel.css",
@@ -51,6 +58,7 @@ namespace Twogether {
                             "~/Content/jvectormap/jquery-jvectormap-2.0.3.css",
                             "~/Content/notika-custom-icon.css",
                             "~/Content/wave/waves.min.css",
+                            "~/Content/wave/button.css",
                             "~/Content/main.css",
                             "~/Content/style.css",
                             "~/Content/responsive.css"
