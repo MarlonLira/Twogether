@@ -103,6 +103,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Components\DialogForm.ascx" />
+    <Content Include="Components\FormAlunoUsc.ascx" />
+    <Content Include="Components\TableStripedUsc.ascx" />
+    <Content Include="Components\TableUsc.ascx" />
     <Content Include="Content\animate.css" />
     <Content Include="Content\animation\animation-custom.css" />
     <Content Include="Content\bootstrap-grid.css" />
@@ -327,6 +331,34 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Components\DialogForm.ascx.cs">
+      <DependentUpon>DialogForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\DialogForm.ascx.designer.cs">
+      <DependentUpon>DialogForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\FormAlunoUsc.ascx.cs">
+      <DependentUpon>FormAlunoUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\FormAlunoUsc.ascx.designer.cs">
+      <DependentUpon>FormAlunoUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\TableStripedUsc.ascx.cs">
+      <DependentUpon>TableStripedUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\TableStripedUsc.ascx.designer.cs">
+      <DependentUpon>TableStripedUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\TableUsc.ascx.cs">
+      <DependentUpon>TableUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\TableUsc.ascx.designer.cs">
+      <DependentUpon>TableUsc.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

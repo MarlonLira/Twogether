@@ -45,7 +45,42 @@ namespace Twogether {
                 "~/Scripts/wizard/wizard-active.js"
                 ));
 
-           bundles.Add(new StyleBundle("~/bundles/css").Include(
+            //Tabelas
+            bundles.Add(new ScriptBundle("~/bundles/datatable").Include(
+                "~/Scripts/data-table/jquery.dataTables.min.js",
+                "~/Scripts/data-table/data-table-act.js"
+                ));
+
+            //Forms
+            bundles.Add(new ScriptBundle("~/bundles/summer").Include(
+                "~/Scripts/summernote/summernote-updated.min.js",
+                "~/Scripts/summernote/summernote-active.js"
+                ));
+
+            bundles.Add(new ScriptBundle("~/bundles/dropzone").Include(
+                "~/Scripts/dropzone/dropzone.js",
+                "~/Scripts/chosen/chosen.jquery.js"
+                ));
+
+            bundles.Add(new ScriptBundle("~/bundles/dialog").Include(
+               "~/Scripts/dialog/sweetalert2.min.js",
+               "~/Scripts/dialog/dialog-active.js"
+               ));
+
+            //Mask
+            bundles.Add(new ScriptBundle("~/bundles/mask").Include(
+                "~/Scripts/jasny-bootstrap.min.js",
+                "~/Scripts/icheck/icheck.min.js",
+                "~/Scripts/icheck/icheck-active.js",
+                "~/Scripts/rangle-slider/jquery-ui-1.10.4.custom.min.js",
+                "~/Scripts/rangle-slider/jquery-ui-touch-punch.min.js",
+                "~/Scripts/rangle-slider/rangle-active.js",
+                "~/Scripts/datapicker/bootstrap-datepicker.js",
+                "~/Scripts/datapicker/datepicker-active.js",
+                "~/Scripts/bootstrap-select/bootstrap-select.js"
+                ));
+
+            bundles.Add(new StyleBundle("~/bundles/css").Include(
                             "~/Content/bootstrap.min.css",
                             "~/Content/font-awesome.min.css",
                             "~/Content/owl.carousel.css",
@@ -61,7 +96,10 @@ namespace Twogether {
                             "~/Content/wave/button.css",
                             "~/Content/main.css",
                             "~/Content/style.css",
-                            "~/Content/responsive.css"
+                            "~/Content/responsive.css",
+                            "~/Content/jquery.dataTables.min.css",
+                            "~/Content/dialog/sweetalert2.min.css",
+                            "~/Content/dialog/dialog.css"
                             ).IncludeDirectory("~/Content", ".css"));
 
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(

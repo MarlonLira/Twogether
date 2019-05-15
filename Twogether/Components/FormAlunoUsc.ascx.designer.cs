@@ -7,18 +7,18 @@
 // </gerado automaticamente>
 //------------------------------------------------------------------------------
 
-namespace Twogether.Views.Aluno {
+namespace Twogether.Components {
     
     
-    public partial class EtapaPge {
+    public partial class FormAlunoUsc {
         
         /// <summary>
-        /// Controle WebControl2.
+        /// Controle pnl_frmAluno.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.FormAlunoUsc WebControl2;
+        protected global::System.Web.UI.WebControls.Panel pnl_frmAluno;
     }
 }
