@@ -51,7 +51,7 @@ namespace Twogether {
                 "~/Scripts/data-table/data-table-act.js"
                 ));
 
-            //Forms
+            //Summer
             bundles.Add(new ScriptBundle("~/bundles/summer").Include(
                 "~/Scripts/summernote/summernote-updated.min.js",
                 "~/Scripts/summernote/summernote-active.js"
@@ -80,6 +80,19 @@ namespace Twogether {
                 "~/Scripts/bootstrap-select/bootstrap-select.js"
                 ));
 
+            //Button
+            bundles.Add(new StyleBundle("~/bundles/button").Include(
+                "~/Content/notika-custom-icon.css",
+                "~/Content/wave/waves.min.css",
+                "~/Content/wave/button.css"
+               ));
+
+            //Chosen
+            bundles.Add(new StyleBundle("~/bundles/chosen").Include(
+                "~/Content/chosen/chosen.css",
+                "~/Content/bootstrap-select/bootstrap-select.css"
+               ));
+            
             bundles.Add(new StyleBundle("~/bundles/css").Include(
                             "~/Content/bootstrap.min.css",
                             "~/Content/font-awesome.min.css",
@@ -99,7 +112,7 @@ namespace Twogether {
                             "~/Content/responsive.css",
                             "~/Content/jquery.dataTables.min.css",
                             "~/Content/dialog/sweetalert2.min.css",
-                            "~/Content/dialog/dialog.css"
+                            "~/Content/dialog/dialog.css"                            
                             ).IncludeDirectory("~/Content", ".css"));
 
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
