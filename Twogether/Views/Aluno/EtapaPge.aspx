@@ -58,15 +58,15 @@
                             <div class="tab-content" runat="server">
 
                                 <div class="tab-pane wizard-ctn" id="tab1">                                    
-                                    <FormAlunoUsc:WebControl runat="server" ID="WebControl2"/>
+                                    <usc:FrmAlunoUsc runat="server" ID="frm_aluno_anamnese"/>
                                 </div>
 
                                 <div class="tab-pane wizard-ctn" id="tab2">
-                                   
+                                   <usc:TableStripedUsc runat="server" ID="TableStripedUsc"/>
                                 </div>
 
                                 <div class="tab-pane wizard-ctn" id="tab3">
-                                    
+                                    <usc:FrmParqUsc runat="server" ID="FrmParqUsc"/>
                                 </div>
 
                                 <div class="tab-pane wizard-ctn" id="frm_aluno">
@@ -87,10 +87,10 @@
 
                                 <div class="wizard-action-pro">
                                     <ul class="wizard-nav-ac">
-                                        <li><a class="button-first a-prevent" href="#"><i class="notika-icon notika-more-button"></i></a></li>
-                                        <li><a class="button-previous a-prevent" href="#"><i class="notika-icon notika-back"></i></a></li>
-                                        <li><a class="button-next a-prevent" href="#"><i class="notika-icon notika-next-pro"></i></a></li>
-                                        <li><a class="button-last a-prevent" href="#"><i class="notika-icon notika-more-button"></i></a></li>
+                                        <li><a class="button-first a-prevent" style="background-color:#F44336" href="#"><i class="notika-icon notika-more-button" style="background-color:#F44336"></i></a></li>
+                                        <li><a class="button-previous a-prevent"style="background-color:#F44336" href="#"><i class="notika-icon notika-back" style="background-color:#F44336"></i></a></li>
+                                        <li><a class="button-next a-prevent" style="background-color:#F44336" href="#"><i class="notika-icon notika-next-pro" style="background-color:#F44336" ></i></a></li>
+                                        <li><a class="button-last a-prevent" style="background-color:#F44336" href="#"><i class="notika-icon notika-more-button" style="background-color:#F44336" ></i></a></li>
                                     </ul>
                                 </div>
                             </div>

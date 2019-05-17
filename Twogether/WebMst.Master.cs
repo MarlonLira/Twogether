@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace Twogether {
-    public partial class WebMst : System.Web.UI.MasterPage {
+    public partial class WebMst : MasterPage {
 
         public String FormatUrl(String Url) {
             String Result = (HttpContext.Current.Request.Url.Authority + @"/" + Url.Replace(@"~/", @"/"));

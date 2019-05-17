@@ -4,7 +4,7 @@
 <div class="col-lg-4 col-md-4 col-sm-3 col-xs-12">
     <div class="Row">
         <div class="form-example-int mg-t-15">
-            <asp:Button ID="btn_control" class="btn-success notika-btn-success" On runat="server"/>
+            <asp:Button ID="btn_control" class="btn-success notika-btn-success" On runat="server" style="background-color:#F44336"/>
         </div>
     </div>
 </div>

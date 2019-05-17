@@ -7,7 +7,7 @@
 <div class="form-element-area">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
                 <div class="form-element-list mg-t-30">
 
                     <div class="cmp-tb-hd">
@@ -45,27 +45,5 @@
         </div>
     </div>
 </div>
-</br>
-<div class="form-element-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="form-element-list mg-t-30">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="fm-checkbox">
-                                <label><input type="radio" value="option1" name="a" class="i-checks"> <i></i> Option two is after click checked Radio</label>
-                            </div>
-                        </div>
-                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="fm-checkbox">
-                                <label><input type="radio" value="option1" name="a" class="i-checks"> <i></i> Option two is after click checked Radio</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
 <%: Scripts.Render("~/bundles/js") %>

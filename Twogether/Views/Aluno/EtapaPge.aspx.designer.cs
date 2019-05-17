@@ -13,12 +13,30 @@ namespace Twogether.Views.Aluno {
     public partial class EtapaPge {
         
         /// <summary>
-        /// Controle WebControl2.
+        /// Controle frm_aluno_anamnese.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.FormAlunoUsc WebControl2;
+        protected global::Twogether.Components.FormAlunoUsc frm_aluno_anamnese;
+        
+        /// <summary>
+        /// Controle TableStripedUsc.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::Twogether.Components.TableStripedUsc TableStripedUsc;
+        
+        /// <summary>
+        /// Controle FrmParqUsc.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::Twogether.Components.FrmParqUsc FrmParqUsc;
     }
 }
