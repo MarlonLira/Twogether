@@ -1,8 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="TextBoxUsc.ascx.cs" Inherits="Twogether.Components.Common.TextBoxUsc" %>
 <%@ Import Namespace="System.Web.Optimization" %>
-
-<%: Styles.Render("~/bundles/css") %>
-<%: Styles.Render("~/bundles/button") %>
   
 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
     <div class="form-group ic-cmp-int">

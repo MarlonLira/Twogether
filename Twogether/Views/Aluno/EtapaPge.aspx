@@ -15,16 +15,15 @@
 										<i class="notika-icon notika-edit"></i>
 									</div>
 									<div class="breadcomb-ctn">
-										<h2>Anamnese</h2>
-										<p>Pagina de pesquisa do <span class="bread-ntd">2 Gether</span></p>
+										<h2>Avaliação</h2>
+										<p>Pagina de avaliação do <span class="bread-ntd">aluno</span></p>
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-3">
-								<div class="breadcomb-report">
-									<button data-toggle="tooltip" data-placement="left" title="Baixar Relatório" class="btn" href="../Error/404.aspx" ><i class="notika-icon notika-sent"></i></button>
-								</div>
-							</div>
+                            <div class="button-icon-btn" style="float:right">
+                                <button class="btn btn-default btn-icon-notika"><i class="notika-icon notika-menus"></i> Editar</button>
+                            </div>
+                            <usc:FrmAlunoUsc runat="server" ID="FrmAlunoUsc" Title="" btnTitle=""/>
 						</div>
 					</div>
 				</div>
@@ -34,6 +33,7 @@
 	<!-- Breadcomb area End-->
 
   <!-- Wizard area Start-->
+<asp:Panel ID="pnl_control" runat="server">
     <div class="wizard-area">
         <div class="container">
             <div class="row">
@@ -44,32 +44,36 @@
                                 <div class="navbar-inner">
                                     <div class="container-pro wizard-cts-st">
                                         <ul>
-                                            <li><a href="#tab1" data-toggle="tab">Etapa 1</a></li>
-                                            <li><a href="#tab2" data-toggle="tab">Etapa 2</a></li>
-                                            <li><a href="#tab3" data-toggle="tab">Etapa 3</a></li>
-                                            <li><a href="#frm_aluno" data-toggle="tab">Etapa 4</a></li>
-                                            <li><a href="#tab5" data-toggle="tab">Etapa 5</a></li>
-                                            <li><a href="#tab6" data-toggle="tab">Etapa 6</a></li>
-                                            <li><a href="#tab7" data-toggle="tab">Etapa 7</a></li>
+                                            <li id="tbpEtapa1" runat="server"><a href="#tab1" data-toggle="tab">Etapa 1</a></li>
+                                            <li id="tbpEtapa2" runat="server"><a href="#tab2" data-toggle="tab">Etapa 2</a></li>
+                                            <li id="tbpEtapa3" runat="server"><a href="#tab3" data-toggle="tab">Etapa 3</a></li>
+                                            <li id="tbpEtapa4" runat="server"><a href="#tab4" data-toggle="tab">Etapa 4</a></li>
+                                            <li id="tbpEtapa5" runat="server"><a href="#tab5" data-toggle="tab">Etapa 5</a></li>
+                                            <li id="tbpEtapa6" runat="server"><a href="#tab6" data-toggle="tab">Etapa 6</a></li>
+                                            <li id="tbpEtapa7" runat="server"><a href="#tab7" data-toggle="tab">Etapa 7</a></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                             <div class="tab-content" runat="server">
 
-                                <div class="tab-pane wizard-ctn" id="tab1">                                    
-                                    <usc:FrmAlunoUsc runat="server" ID="frm_aluno_anamnese"/>
+                                <div class="tab-pane wizard-ctn" id="tab1">
+                                    <asp:Panel ID="pnl_parq" runat="server">
+                                        <usc:FrmParqUsc runat="server" ID="FrmParqUsc1"/>
+                                    </asp:Panel>
                                 </div>
 
                                 <div class="tab-pane wizard-ctn" id="tab2">
-                                   <usc:TableStripedUsc runat="server" ID="TableStripedUsc"/>
+                                    <asp:Panel ID="pnl_impedancia" runat="server">
+                                        <usc:FrmImpedanciaUsc runat="server" ID="FrmImpedanciaUsc"/>
+                                    </asp:Panel>
                                 </div>
 
                                 <div class="tab-pane wizard-ctn" id="tab3">
-                                    <usc:FrmParqUsc runat="server" ID="FrmParqUsc"/>
+                                    
                                 </div>
 
-                                <div class="tab-pane wizard-ctn" id="frm_aluno">
+                                <div class="tab-pane wizard-ctn" id="tab4">
                                     
                                 </div>
                                 
@@ -82,16 +86,6 @@
                                 </div>
 
                                 <div class="tab-pane wizard-ctn" id="tab7">
-                                   
-                                </div>
-
-                                <div class="wizard-action-pro">
-                                    <ul class="wizard-nav-ac">
-                                        <li><a class="button-first a-prevent" style="background-color:#F44336" href="#"><i class="notika-icon notika-more-button" style="background-color:#F44336"></i></a></li>
-                                        <li><a class="button-previous a-prevent"style="background-color:#F44336" href="#"><i class="notika-icon notika-back" style="background-color:#F44336"></i></a></li>
-                                        <li><a class="button-next a-prevent" style="background-color:#F44336" href="#"><i class="notika-icon notika-next-pro" style="background-color:#F44336" ></i></a></li>
-                                        <li><a class="button-last a-prevent" style="background-color:#F44336" href="#"><i class="notika-icon notika-more-button" style="background-color:#F44336" ></i></a></li>
-                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -100,10 +94,9 @@
             </div>
         </div>
     </div>
+</asp:Panel>
     <!-- Wizard area End-->
-
     <!--  wizard JS
 		============================================ -->
     <%: Scripts.Render("~/bundles/wizard") %>
-    
 </asp:Content>

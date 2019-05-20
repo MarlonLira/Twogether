@@ -103,13 +103,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Components\Common\ButtonReportUsc.ascx" />
     <Content Include="Components\Common\ButtonUsc.ascx" />
     <Content Include="Components\Common\CheckBoxUsc.ascx" />
     <Content Include="Components\Common\ChosenUsc.ascx" />
     <Content Include="Components\Common\DropDownUsc.ascx" />
+    <Content Include="Components\Common\NavWizardUsc.ascx" />
+    <Content Include="Components\Common\RadioButtonUsc.ascx" />
     <Content Include="Components\DialogForm.ascx" />
-    <Content Include="Components\FormAlunoUsc.ascx" />
+    <Content Include="Components\FrmAlunoUsc.ascx" />
+    <Content Include="Components\FrmImpedanciaUsc.ascx" />
     <Content Include="Components\FrmParqUsc.ascx" />
+    <Content Include="Components\Others\QuestionUsc.ascx" />
     <Content Include="Components\TableStripedUsc.ascx" />
     <Content Include="Components\TableUsc.ascx" />
     <Content Include="Components\Common\TextBoxUsc.ascx" />
@@ -338,6 +343,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Components\Common\ButtonReportUsc.ascx.cs">
+      <DependentUpon>ButtonReportUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Common\ButtonReportUsc.ascx.designer.cs">
+      <DependentUpon>ButtonReportUsc.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Components\Common\ButtonUsc.ascx.cs">
       <DependentUpon>ButtonUsc.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -366,6 +378,20 @@
     <Compile Include="Components\Common\DropDownUsc.ascx.designer.cs">
       <DependentUpon>DropDownUsc.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Components\Common\NavWizardUsc.ascx.cs">
+      <DependentUpon>NavWizardUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Common\NavWizardUsc.ascx.designer.cs">
+      <DependentUpon>NavWizardUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Common\RadioButtonUsc.ascx.cs">
+      <DependentUpon>RadioButtonUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Common\RadioButtonUsc.ascx.designer.cs">
+      <DependentUpon>RadioButtonUsc.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Components\DialogForm.ascx.cs">
       <DependentUpon>DialogForm.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -373,12 +399,19 @@
     <Compile Include="Components\DialogForm.ascx.designer.cs">
       <DependentUpon>DialogForm.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Components\FormAlunoUsc.ascx.cs">
-      <DependentUpon>FormAlunoUsc.ascx</DependentUpon>
+    <Compile Include="Components\FrmAlunoUsc.ascx.cs">
+      <DependentUpon>FrmAlunoUsc.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Components\FormAlunoUsc.ascx.designer.cs">
-      <DependentUpon>FormAlunoUsc.ascx</DependentUpon>
+    <Compile Include="Components\FrmAlunoUsc.ascx.designer.cs">
+      <DependentUpon>FrmAlunoUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\FrmImpedanciaUsc.ascx.cs">
+      <DependentUpon>FrmImpedanciaUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\FrmImpedanciaUsc.ascx.designer.cs">
+      <DependentUpon>FrmImpedanciaUsc.ascx</DependentUpon>
     </Compile>
     <Compile Include="Components\FrmParqUsc.ascx.cs">
       <DependentUpon>FrmParqUsc.ascx</DependentUpon>
@@ -386,6 +419,13 @@
     </Compile>
     <Compile Include="Components\FrmParqUsc.ascx.designer.cs">
       <DependentUpon>FrmParqUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Others\QuestionUsc.ascx.cs">
+      <DependentUpon>QuestionUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Others\QuestionUsc.ascx.designer.cs">
+      <DependentUpon>QuestionUsc.ascx</DependentUpon>
     </Compile>
     <Compile Include="Components\TableStripedUsc.ascx.cs">
       <DependentUpon>TableStripedUsc.ascx</DependentUpon>

@@ -14,7 +14,7 @@
                         <li><a data-toggle="tab" href="#Page"><i class="notika-icon notika-edit"></i> Avaliação</a>
                         </li>
                     </ul>
-                    <div class="tab-content custom-menu-content">
+                    <div class="tab-content custom-menu-content" >
                         <div id="Home" class="tab-pane in active notika-tab-menu-bg animated flipInX">
                             <ul class="notika-main-menu-dropdown">
                                 <li><a href="/Views/Error/404.aspx">Dashboard One</a>
@@ -42,7 +42,7 @@
                             </ul>
                         </div>
                         <div id="Page" class="tab-pane notika-tab-menu-bg animated flipInX">
-                            <ul class="notika-main-menu-dropdown">
+                            <ul class="notika-main-menu-dropdown" >
                                 <li><a href="<%=FormatUrl("/Views/Aluno/AnamnesePge.aspx") %>">Anamnese</a>
                                 </li>
                                 <li><a href="<%=FormatUrl("/Views/Aluno/EtapaPge.aspx") %>">Bioimpedância</a>

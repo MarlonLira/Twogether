@@ -10,61 +10,61 @@
 namespace Twogether.Components {
     
     
-    public partial class FormAlunoUsc {
+    public partial class FrmImpedanciaUsc {
         
         /// <summary>
-        /// Controle txt_nome.
+        /// Controle txt_imc.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Common.TextBoxUsc txt_nome;
+        protected global::Twogether.Components.Common.TextBoxUsc txt_imc;
         
         /// <summary>
-        /// Controle txt_email.
+        /// Controle txt_gordura.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Common.TextBoxUsc txt_email;
+        protected global::Twogether.Components.Common.TextBoxUsc txt_gordura;
         
         /// <summary>
-        /// Controle txt_phone.
+        /// Controle txt_massa.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Common.TextBoxUsc txt_phone;
+        protected global::Twogether.Components.Common.TextBoxUsc txt_massa;
         
         /// <summary>
-        /// Controle txt_idade.
+        /// Controle txt_metabolismo.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Common.TextBoxUsc txt_idade;
+        protected global::Twogether.Components.Common.TextBoxUsc txt_metabolismo;
         
         /// <summary>
-        /// Controle txt_sexo.
+        /// Controle txt_biologica.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Common.TextBoxUsc txt_sexo;
+        protected global::Twogether.Components.Common.TextBoxUsc txt_biologica;
         
         /// <summary>
-        /// Controle txt_data.
+        /// Controle txt_visceral.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Common.TextBoxUsc txt_data;
+        protected global::Twogether.Components.Common.TextBoxUsc txt_visceral;
         
         /// <summary>
         /// Controle txt_peso.

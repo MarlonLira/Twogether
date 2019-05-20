@@ -2,6 +2,6 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-    <usc:FrmAlunoUsc runat="server" ID="frm_aluno_anamnese"/>
+    <usc:FrmParqUsc runat="server" ID="FrmParqUsc"/>
 
 </asp:Content>
