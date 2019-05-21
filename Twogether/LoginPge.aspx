@@ -14,7 +14,7 @@
 <body>
     <form id="frmLogin" runat="server">
         <!-- Login Register area Start-->
-    <div class="login-content" style="background-image:url('/img/bg/bg2.png') !important">
+    <div class="login-content" style="background-color:black; background-image:url('/img/bg/bg9.png'); background-repeat:no-repeat; background-position:center; background-position-y:top">
         <!-- Login -->
         <div class="nk-block toggled" id="l-login">
             <div class="nk-form">
@@ -33,7 +33,7 @@
                 <div class="fm-checkbox">
                     <label><input type="checkbox" class="i-checks"> <i></i> Keep me signed in</label>
                 </div>
-                <a href="/Default" data-ma-action="nk-login-switch" data-ma-block="#l-register" class="btn btn-login btn-success btn-float"><i class="notika-icon notika-right-arrow right-arrow-ant"></i></a>
+                <a href="/Default.aspx" data-ma-action="nk-login-switch" data-ma-block="#l-register" class="btn btn-login btn-success btn-float" style="background-color:#F44336"><i class="notika-icon notika-right-arrow right-arrow-ant"></i></a>
             </div>
 
             <div class="nk-navigation nk-lg-ic">

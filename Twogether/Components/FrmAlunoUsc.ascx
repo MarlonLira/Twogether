@@ -13,13 +13,13 @@
                     <div class="row">
                         <usc:TextBoxUsc runat="server" ID="txt_nome" Title="Nome"  LoadStyle="support"/>
                         <usc:TextBoxUsc runat="server" ID="txt_email" Title="Email" LoadStyle="mail"/>
-                        <usc:TextBoxUsc runat="server" ID="txt_phone" Title="Telefone" LoadStyle="phone"/>
+                        <usc:TextBoxUsc runat="server" ID="txt_phone" Title="Telefone" LoadStyle="phone" Mask="Phone"/>
                     </div>
 
                     <div class="row">
                         <usc:TextBoxUsc runat="server" ID="txt_idade" Title="Idade" LoadStyle="star"/>
                         <usc:TextBoxUsc runat="server" ID="txt_sexo" Title="Sexo(M/F)" LoadStyle="chat"/>
-                        <usc:TextBoxUsc runat="server" ID="txt_data" Title="Data" LoadStyle="calendar"/>
+                        <usc:TextBoxUsc runat="server" ID="txt_data" Title="Data" LoadStyle="calendar" Mask="Date"/>
                     </div>
 
                     <!--div class="row">

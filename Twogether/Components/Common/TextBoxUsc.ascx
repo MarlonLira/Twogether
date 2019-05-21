@@ -14,4 +14,3 @@
 </div>
 
 <%: Scripts.Render("~/bundles/js") %>
-<%: Scripts.Render("~/bundles/mask") %>
