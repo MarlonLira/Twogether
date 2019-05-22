@@ -1,0 +1,557 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8A1BCBF5-F760-4FC6-BEBF-D9452DE2F53F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Twogether</RootNamespace>
+    <AssemblyName>Twogether</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+    <TypeScriptToolsVersion>3.0</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap, Version=4.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.4.3.1\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery, Version=3.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.3.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ScriptManager.jQuery, Version=1.7.2.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ScriptManager.jQuery.1.7.2.1\lib\net40\Microsoft.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Components\Common\ButtonReportUsc.ascx" />
+    <Content Include="Components\Common\ButtonUsc.ascx" />
+    <Content Include="Components\Common\CheckBoxUsc.ascx" />
+    <Content Include="Components\Common\ChosenUsc.ascx" />
+    <Content Include="Components\Common\DropDownUsc.ascx" />
+    <Content Include="Components\Common\NavWizardUsc.ascx" />
+    <Content Include="Components\Common\RadioButtonUsc.ascx" />
+    <Content Include="Components\DialogForm.ascx" />
+    <Content Include="Components\FrmAlunoUsc.ascx" />
+    <Content Include="Components\FrmImpedanciaUsc.ascx" />
+    <Content Include="Components\FrmParqUsc.ascx" />
+    <Content Include="Components\Others\QuestionUsc.ascx" />
+    <Content Include="Components\TableStripedUsc.ascx" />
+    <Content Include="Components\TableUsc.ascx" />
+    <Content Include="Components\Common\TextBoxUsc.ascx" />
+    <Content Include="Content\animate.css" />
+    <Content Include="Content\animation\animation-custom.css" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-select\bootstrap-select.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\c3\c3.min.css" />
+    <Content Include="Content\chosen\chosen-sprite.png" />
+    <Content Include="Content\chosen\chosen.css" />
+    <Content Include="Content\code-editor\1.jpg" />
+    <Content Include="Content\code-editor\ambiance.css" />
+    <Content Include="Content\code-editor\codemirror.css" />
+    <Content Include="Content\color-picker\farbtastic.css" />
+    <Content Include="Content\color-picker\marker.png" />
+    <Content Include="Content\color-picker\mask.png" />
+    <Content Include="Content\color-picker\wheel.png" />
+    <Content Include="Content\cropper\cropper.min.css" />
+    <Content Include="Content\datapicker\datepicker3.css" />
+    <Content Include="Content\dialog\dialog.css" />
+    <Content Include="Content\dialog\sweetalert2.min.css" />
+    <Content Include="Content\dropzone\dropzone.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\fonts\notika-icon.svg" />
+    <Content Include="Content\jquery.dataTables.min.css" />
+    <Content Include="Content\jvectormap\jquery-jvectormap-2.0.3.css" />
+    <Content Include="Content\main.css" />
+    <Content Include="Content\meanmenu\meanmenu.min.css" />
+    <Content Include="Content\metisMenu\metisMenu-vertical.css" />
+    <Content Include="Content\metisMenu\metisMenu.min.css" />
+    <Content Include="Content\normalize.css" />
+    <Content Include="Content\notification\notification.css" />
+    <Content Include="Content\notika-custom-icon.css" />
+    <Content Include="Content\owl.carousel.css" />
+    <Content Include="Content\owl.theme.css" />
+    <Content Include="Content\owl.transitions.css" />
+    <Content Include="Content\responsive.css" />
+    <Content Include="Content\scrollbar\jquery.mCustomScrollbar.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="Content\summernote\summernote.css" />
+    <Content Include="Content\themesaller-forms.css" />
+    <Content Include="Content\wave\button.css" />
+    <Content Include="Content\wave\waves.min.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="LoginPge.aspx" />
+    <Content Include="Scripts\animation\animation-active.js" />
+    <Content Include="Scripts\autosize.min.js" />
+    <Content Include="Scripts\bootstrap-select\bootstrap-select.js" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\charts\area-chart.js" />
+    <Content Include="Scripts\charts\bar-chart.js" />
+    <Content Include="Scripts\charts\Chart.js" />
+    <Content Include="Scripts\charts\line-chart.js" />
+    <Content Include="Scripts\chat\jquery.chat.js" />
+    <Content Include="Scripts\chat\moment.min.js" />
+    <Content Include="Scripts\chosen\chosen.jquery.js" />
+    <Content Include="Scripts\code-editor\code-editor-active.js" />
+    <Content Include="Scripts\code-editor\code-editor.js" />
+    <Content Include="Scripts\code-editor\codemirror.js" />
+    <Content Include="Scripts\color-picker\color-picker.js" />
+    <Content Include="Scripts\color-picker\farbtastic.min.js" />
+    <Content Include="Scripts\counterup\counterup-active.js" />
+    <Content Include="Scripts\counterup\jquery.counterup.min.js" />
+    <Content Include="Scripts\counterup\waypoints.min.js" />
+    <Content Include="Scripts\cropper\cropper-actice.js" />
+    <Content Include="Scripts\cropper\cropper.min.js" />
+    <Content Include="Scripts\data-map\d3.min.js" />
+    <Content Include="Scripts\data-map\data-maps-active.js" />
+    <Content Include="Scripts\data-map\datamaps.all.min.js" />
+    <Content Include="Scripts\data-map\topojson.js" />
+    <Content Include="Scripts\data-table\data-table-act.js" />
+    <Content Include="Scripts\data-table\jquery.dataTables.min.js" />
+    <Content Include="Scripts\datapicker\bootstrap-datepicker.js" />
+    <Content Include="Scripts\datapicker\datepicker-active.js" />
+    <Content Include="Scripts\dialog\dialog-active.js" />
+    <Content Include="Scripts\dialog\sweetalert2.min.js" />
+    <Content Include="Scripts\dropzone\dropzone.js" />
+    <Content Include="Scripts\easytopie\jquery.easypiechart.min.js" />
+    <Content Include="Scripts\easytopie\salvattore.min.js" />
+    <Content Include="Scripts\esm\popper-utils.js" />
+    <Content Include="Scripts\esm\popper-utils.min.js" />
+    <Content Include="Scripts\esm\popper.js" />
+    <Content Include="Scripts\esm\popper.min.js" />
+    <Content Include="Scripts\flot\analtic-flot-active.js" />
+    <Content Include="Scripts\flot\chart-tooltips.js" />
+    <Content Include="Scripts\flot\curvedLines.js" />
+    <Content Include="Scripts\flot\flot-active.js" />
+    <Content Include="Scripts\flot\flot-widget-anatic-active.js" />
+    <Content Include="Scripts\flot\jquery.flot.js" />
+    <Content Include="Scripts\flot\jquery.flot.orderBars.js" />
+    <Content Include="Scripts\flot\jquery.flot.pie.js" />
+    <Content Include="Scripts\flot\jquery.flot.resize.js" />
+    <Content Include="Scripts\flot\jquery.flot.time.js" />
+    <Content Include="Scripts\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="Scripts\google.maps\google.maps-active.js" />
+    <Content Include="Scripts\google.maps\google.maps2-active.js" />
+    <Content Include="Scripts\icheck\icheck-active.js" />
+    <Content Include="Scripts\icheck\icheck.min.js" />
+    <Content Include="Scripts\jasny-bootstrap.min.js" />
+    <Content Include="Scripts\esm\popper.min.js.map" />
+    <Content Include="Scripts\esm\popper.js.map" />
+    <Content Include="Scripts\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\fonts\notika-icon.eot" />
+    <Content Include="Content\fonts\notika-icon.ttf" />
+    <Content Include="Content\fonts\notika-icon.woff" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\jquery-price-slider.js" />
+    <Content Include="Scripts\jquery.scrollUp.min.js" />
+    <Content Include="Scripts\jvectormap\jquery-jvectormap-2.0.2.min.js" />
+    <Content Include="Scripts\jvectormap\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="Scripts\jvectormap\jvectormap-active.js" />
+    <Content Include="Scripts\knob\jquery.appear.js" />
+    <Content Include="Scripts\knob\jquery.knob.js" />
+    <Content Include="Scripts\knob\knob-active.js" />
+    <Content Include="Scripts\login\login-action.js" />
+    <Content Include="Scripts\main.js" />
+    <Content Include="Scripts\meanmenu\jquery.meanmenu.js" />
+    <Content Include="Scripts\metisMenu\metisMenu-active.js" />
+    <Content Include="Scripts\metisMenu\metisMenu.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\notification\bootstrap-growl.min.js" />
+    <Content Include="Scripts\notification\notification-active.js" />
+    <Content Include="Scripts\owl.carousel.min.js" />
+    <Content Include="Scripts\plugins.js" />
+    <Content Include="Scripts\popper-utils.js" />
+    <Content Include="Scripts\popper-utils.min.js" />
+    <Content Include="Scripts\popper.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\rangle-slider\jquery-ui-1.10.4.custom.min.js" />
+    <Content Include="Scripts\rangle-slider\jquery-ui-touch-punch.min.js" />
+    <Content Include="Scripts\rangle-slider\rangle-active.js" />
+    <Content Include="Scripts\scrollbar\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="Scripts\sparkline\jquery.sparkline.min.js" />
+    <Content Include="Scripts\sparkline\sparkline-active.js" />
+    <Content Include="Scripts\summernote\summernote-active.js" />
+    <Content Include="Scripts\summernote\summernote-updated.min.js" />
+    <Content Include="Scripts\summernote\summernote.min.js" />
+    <Content Include="Scripts\tawk-chat.js" />
+    <Content Include="Scripts\todo\jquery.todo.js" />
+    <Content Include="Scripts\umd\popper-utils.js" />
+    <Content Include="Scripts\umd\popper-utils.min.js" />
+    <Content Include="Scripts\umd\popper.js" />
+    <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Scripts\vendor\jquery-1.12.4.min.js" />
+    <Content Include="Scripts\vendor\modernizr-2.8.3.min.js" />
+    <Content Include="Scripts\wave\wave-active.js" />
+    <Content Include="Scripts\wave\waves.min.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\wizard\jquery.bootstrap.wizard.min.js" />
+    <Content Include="Scripts\wizard\wizard-active.js" />
+    <Content Include="Scripts\wow.min.js" />
+    <Content Include="Views\Aluno\AnamnesePge.aspx" />
+    <Content Include="Views\Aluno\EtapaPge.aspx" />
+    <Content Include="Views\Error\404.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Scripts\umd\popper.min.js.map" />
+    <Content Include="Scripts\umd\popper.js.map" />
+    <Content Include="Scripts\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\umd\popper-utils.js.map" />
+    <Content Include="Scripts\README.md" />
+    <Content Include="Scripts\popper.min.js.map" />
+    <Content Include="Scripts\popper.js.map" />
+    <Content Include="Scripts\popper-utils.min.js.map" />
+    <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="WebMst.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Components\Common\ButtonReportUsc.ascx.cs">
+      <DependentUpon>ButtonReportUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Common\ButtonReportUsc.ascx.designer.cs">
+      <DependentUpon>ButtonReportUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Common\ButtonUsc.ascx.cs">
+      <DependentUpon>ButtonUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Common\ButtonUsc.ascx.designer.cs">
+      <DependentUpon>ButtonUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Common\CheckBoxUsc.ascx.cs">
+      <DependentUpon>CheckBoxUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Common\CheckBoxUsc.ascx.designer.cs">
+      <DependentUpon>CheckBoxUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Common\ChosenUsc.ascx.cs">
+      <DependentUpon>ChosenUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Common\ChosenUsc.ascx.designer.cs">
+      <DependentUpon>ChosenUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Common\DropDownUsc.ascx.cs">
+      <DependentUpon>DropDownUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Common\DropDownUsc.ascx.designer.cs">
+      <DependentUpon>DropDownUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Common\NavWizardUsc.ascx.cs">
+      <DependentUpon>NavWizardUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Common\NavWizardUsc.ascx.designer.cs">
+      <DependentUpon>NavWizardUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Common\RadioButtonUsc.ascx.cs">
+      <DependentUpon>RadioButtonUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Common\RadioButtonUsc.ascx.designer.cs">
+      <DependentUpon>RadioButtonUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\DialogForm.ascx.cs">
+      <DependentUpon>DialogForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\DialogForm.ascx.designer.cs">
+      <DependentUpon>DialogForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\FrmAlunoUsc.ascx.cs">
+      <DependentUpon>FrmAlunoUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\FrmAlunoUsc.ascx.designer.cs">
+      <DependentUpon>FrmAlunoUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\FrmImpedanciaUsc.ascx.cs">
+      <DependentUpon>FrmImpedanciaUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\FrmImpedanciaUsc.ascx.designer.cs">
+      <DependentUpon>FrmImpedanciaUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\FrmParqUsc.ascx.cs">
+      <DependentUpon>FrmParqUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\FrmParqUsc.ascx.designer.cs">
+      <DependentUpon>FrmParqUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Others\QuestionUsc.ascx.cs">
+      <DependentUpon>QuestionUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Others\QuestionUsc.ascx.designer.cs">
+      <DependentUpon>QuestionUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\TableStripedUsc.ascx.cs">
+      <DependentUpon>TableStripedUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\TableStripedUsc.ascx.designer.cs">
+      <DependentUpon>TableStripedUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\TableUsc.ascx.cs">
+      <DependentUpon>TableUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\TableUsc.ascx.designer.cs">
+      <DependentUpon>TableUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Common\TextBoxUsc.ascx.cs">
+      <DependentUpon>TextBoxUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Common\TextBoxUsc.ascx.designer.cs">
+      <DependentUpon>TextBoxUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPge.aspx.cs">
+      <DependentUpon>LoginPge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPge.aspx.designer.cs">
+      <DependentUpon>LoginPge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Aluno\AnamnesePge.aspx.cs">
+      <DependentUpon>AnamnesePge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Aluno\AnamnesePge.aspx.designer.cs">
+      <DependentUpon>AnamnesePge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Aluno\EtapaPge.aspx.cs">
+      <DependentUpon>EtapaPge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Aluno\EtapaPge.aspx.designer.cs">
+      <DependentUpon>EtapaPge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Error\404.aspx.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Error\404.aspx.designer.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebMst.Master.cs">
+      <DependentUpon>WebMst.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebMst.Master.designer.cs">
+      <DependentUpon>WebMst.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55199</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49873/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este projeto faz referência a pacotes do NuGet que não estão presentes neste computador. Use a Restauração de Pacotes do NuGet para baixá-los.  Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkID=322105. O arquivo ausente é {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
