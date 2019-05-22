@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Web.UI;
+using System.Web.UI.WebControls;
 
 namespace Twogether.Components.Common {
     public partial class TextBoxUsc : UserControl {
@@ -10,14 +11,36 @@ namespace Twogether.Components.Common {
         public String LoadStyle { get; set; }
 
         public String Title { get; set; }
-
+       
         public String Mask { get; set; }
+
+        public Int16 Scale { get; set; }
+
+        public TextBoxMode Mode {
+            get {
+                return txt_control.TextMode;
+            } set {
+                txt_control.TextMode = value;
+            }
+        }
+        
+        public String Value {
+            get {
+                return txt_control.Text;
+            }
+            set {
+                txt_control.Text = value;
+            }
+        }
 
         public void RenderTitle() {
             String TypeEdit = "";
 
             if (String.IsNullOrEmpty(Title)) {
                 Title = "Title";
+            }
+            if (Scale == 0) {
+                Scale = 4;
             }
                 txt_control.Attributes.Add("placeholder", Title);
 
@@ -30,11 +53,11 @@ namespace Twogether.Components.Common {
                     TypeEdit = "(99) 9 9999-9999";
                     break;
                 }
-                
             }
 
             txt_control.Attributes.Add("data-mask", TypeEdit);
 
+            txt_control.Attributes.Add("data-mask", TypeEdit);
         }
     
     }

@@ -14,26 +14,28 @@
 <body>
     <form id="frmLogin" runat="server">
         <!-- Login Register area Start-->
-    <div class="login-content" style="background-color:black; background-image:url('/img/bg/bg9.png'); background-repeat:no-repeat; background-position:center; background-position-y:top">
+    <div class="login-content login-marlon">
         <!-- Login -->
         <div class="nk-block toggled" id="l-login">
             <div class="nk-form">
-                <div class="input-group">
-                    <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-support"></i></span>
-                    <div class="nk-int-st">
-                        <input type="text" class="form-control" placeholder="Username">
-                    </div>
+
+                <div class="row">
+                    <usc:TextBoxUsc runat="server" ID="txt_nome" Title="Conta de Acesso"  LoadStyle="support" Scale="12"/>
+                    
                 </div>
-                <div class="input-group mg-t-15">
-                    <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-edit"></i></span>
-                    <div class="nk-int-st">
-                        <input type="password" class="form-control" placeholder="Password">
-                    </div>
+
+                <div class="row">
+                    <usc:TextBoxUsc runat="server" ID="txt_senha" Title="Senha"  LoadStyle="edit" Scale="12" Mode="Password"/>
                 </div>
+
                 <div class="fm-checkbox">
                     <label><input type="checkbox" class="i-checks"> <i></i> Keep me signed in</label>
                 </div>
-                <a href="/Default.aspx" data-ma-action="nk-login-switch" data-ma-block="#l-register" class="btn btn-login btn-success btn-float" style="background-color:#F44336"><i class="notika-icon notika-right-arrow right-arrow-ant"></i></a>
+                <asp:LinkButton ID="btn_entrar" runat="server" 
+                    data-ma-action="nk-login-switch" data-ma-block="#l-register" 
+                    class="btn btn-login btn-success btn-float" 
+                    style="background-color:#F44336" OnClick="btn_entrar_Click"><i class="notika-icon notika-right-arrow right-arrow-ant"></i></asp:LinkButton>
+                <!--a href="/Default.aspx" data-ma-action="nk-login-switch" data-ma-block="#l-register" class="btn btn-login btn-success btn-float" style="background-color:#F44336"><i class="notika-icon notika-right-arrow right-arrow-ant"></i></!--a> -->
             </div>
 
             <div class="nk-navigation nk-lg-ic">

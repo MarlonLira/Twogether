@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Twogether {
     public partial class WebMst : MasterPage {
@@ -16,8 +13,13 @@ namespace Twogether {
             return HttpContext.Current.Request.Url.Scheme + @"://" + Result;
         }
 
+        public String Usuario() {
+            return (Global.Funcionario != null ? Global.Funcionario.Nome : "");
+        }
         protected void Page_Load(object sender, EventArgs e) {
-
+            if (Global.Funcionario == null & Global.Aluno == null) {
+                Response.Redirect("~/LoginPge.aspx", false);
+            }
         }
     }
 }
