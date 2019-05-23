@@ -29,7 +29,7 @@
                 </div>
 
                 <div class="fm-checkbox">
-                    <label><input type="checkbox" class="i-checks"> <i></i> Keep me signed in</label>
+                    <label><input type="checkbox" class="i-checks"> <i></i>Manter Conectado</label>
                 </div>
                 <asp:LinkButton ID="btn_entrar" runat="server" 
                     data-ma-action="nk-login-switch" data-ma-block="#l-register" 
