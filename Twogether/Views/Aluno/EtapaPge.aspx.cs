@@ -1,19 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
+using Brasdat.Gestor.Library.Business.Classes.Fitness;
 
 namespace Twogether.Views.Aluno {
-    public partial class EtapaPge : System.Web.UI.Page {
+    public partial class EtapaPge : Page {
         protected void Page_Load(object sender, EventArgs e) {
             LoadPage();
         }
 
 
         public void LoadPage() {
-            if (String.IsNullOrEmpty((String)Session["Aluno"])) {
+            if ((AlunoPst)Session["Aluno"] == null) {
 
                 /*pnl_parq.Visible = false;
                 pnl_impedancia.Visible = false;*/

@@ -1,6 +1,6 @@
 ﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
-  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -55,6 +55,15 @@
     <Reference Include="AspNet.ScriptManager.jQuery, Version=3.3.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.3.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
     </Reference>
+    <Reference Include="Gestor.Business">
+      <HintPath>..\..\..\Library\Business\bin\Release\Gestor.Business.dll</HintPath>
+    </Reference>
+    <Reference Include="Gestor.Core">
+      <HintPath>..\..\..\Library\Core\bin\Release\Gestor.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Gestor.Sinc">
+      <HintPath>..\..\..\Library\Sinc\bin\Release\Gestor.Sinc.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
     </Reference>
@@ -104,16 +113,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Components\Common\ButtonReportUsc.ascx" />
+    <Content Include="Components\Common\ButtonSearchUsc.ascx" />
     <Content Include="Components\Common\ButtonUsc.ascx" />
     <Content Include="Components\Common\CheckBoxUsc.ascx" />
     <Content Include="Components\Common\ChosenUsc.ascx" />
     <Content Include="Components\Common\DropDownUsc.ascx" />
+    <Content Include="Components\Common\ModalTableUsc.ascx" />
+    <Content Include="Components\Common\ModalUsc.ascx" />
     <Content Include="Components\Common\NavWizardUsc.ascx" />
     <Content Include="Components\Common\RadioButtonUsc.ascx" />
     <Content Include="Components\DialogForm.ascx" />
+    <Content Include="Components\FrmAlunoPesquisarUsc.ascx" />
     <Content Include="Components\FrmAlunoUsc.ascx" />
     <Content Include="Components\FrmImpedanciaUsc.ascx" />
     <Content Include="Components\FrmParqUsc.ascx" />
+    <Content Include="Components\Others\ChatDropdownUsc.ascx" />
+    <Content Include="Components\Others\MsgDropdownUsc.ascx" />
+    <Content Include="Components\Others\NotificationDropdownUsc.ascx" />
+    <Content Include="Components\Others\PercentDropdownUsc.ascx" />
     <Content Include="Components\Others\QuestionUsc.ascx" />
     <Content Include="Components\TableStripedUsc.ascx" />
     <Content Include="Components\TableUsc.ascx" />
@@ -326,8 +343,10 @@
     <Content Include="Scripts\wizard\jquery.bootstrap.wizard.min.js" />
     <Content Include="Scripts\wizard\wizard-active.js" />
     <Content Include="Scripts\wow.min.js" />
+    <Content Include="Settings.xml" />
     <Content Include="Views\Aluno\AnamnesePge.aspx" />
     <Content Include="Views\Aluno\EtapaPge.aspx" />
+    <Content Include="Views\Colaborador\ColaboradorPge.aspx" />
     <Content Include="Views\Error\404.aspx" />
     <Content Include="Web.config" />
     <Content Include="Scripts\umd\popper.min.js.map" />
@@ -349,6 +368,13 @@
     </Compile>
     <Compile Include="Components\Common\ButtonReportUsc.ascx.designer.cs">
       <DependentUpon>ButtonReportUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Common\ButtonSearchUsc.ascx.cs">
+      <DependentUpon>ButtonSearchUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Common\ButtonSearchUsc.ascx.designer.cs">
+      <DependentUpon>ButtonSearchUsc.ascx</DependentUpon>
     </Compile>
     <Compile Include="Components\Common\ButtonUsc.ascx.cs">
       <DependentUpon>ButtonUsc.ascx</DependentUpon>
@@ -378,6 +404,20 @@
     <Compile Include="Components\Common\DropDownUsc.ascx.designer.cs">
       <DependentUpon>DropDownUsc.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Components\Common\ModalTableUsc.ascx.cs">
+      <DependentUpon>ModalTableUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Common\ModalTableUsc.ascx.designer.cs">
+      <DependentUpon>ModalTableUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Common\ModalUsc.ascx.cs">
+      <DependentUpon>ModalUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Common\ModalUsc.ascx.designer.cs">
+      <DependentUpon>ModalUsc.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Components\Common\NavWizardUsc.ascx.cs">
       <DependentUpon>NavWizardUsc.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -399,6 +439,13 @@
     <Compile Include="Components\DialogForm.ascx.designer.cs">
       <DependentUpon>DialogForm.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Components\FrmAlunoPesquisarUsc.ascx.cs">
+      <DependentUpon>FrmAlunoPesquisarUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\FrmAlunoPesquisarUsc.ascx.designer.cs">
+      <DependentUpon>FrmAlunoPesquisarUsc.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Components\FrmAlunoUsc.ascx.cs">
       <DependentUpon>FrmAlunoUsc.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -419,6 +466,34 @@
     </Compile>
     <Compile Include="Components\FrmParqUsc.ascx.designer.cs">
       <DependentUpon>FrmParqUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Others\ChatDropdownUsc.ascx.cs">
+      <DependentUpon>ChatDropdownUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Others\ChatDropdownUsc.ascx.designer.cs">
+      <DependentUpon>ChatDropdownUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Others\MsgDropdownUsc.ascx.cs">
+      <DependentUpon>MsgDropdownUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Others\MsgDropdownUsc.ascx.designer.cs">
+      <DependentUpon>MsgDropdownUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Others\NotificationDropdownUsc.ascx.cs">
+      <DependentUpon>NotificationDropdownUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Others\NotificationDropdownUsc.ascx.designer.cs">
+      <DependentUpon>NotificationDropdownUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Others\PercentDropdownUsc.ascx.cs">
+      <DependentUpon>PercentDropdownUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Others\PercentDropdownUsc.ascx.designer.cs">
+      <DependentUpon>PercentDropdownUsc.ascx</DependentUpon>
     </Compile>
     <Compile Include="Components\Others\QuestionUsc.ascx.cs">
       <DependentUpon>QuestionUsc.ascx</DependentUpon>
@@ -458,6 +533,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\Help.cs" />
     <Compile Include="LoginPge.aspx.cs">
       <DependentUpon>LoginPge.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -466,6 +542,13 @@
       <DependentUpon>LoginPge.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Aluno\AlunoPge.Master.cs">
+      <DependentUpon>AlunoPge.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Aluno\AlunoPge.Master.designer.cs">
+      <DependentUpon>AlunoPge.Master</DependentUpon>
+    </Compile>
     <Compile Include="Views\Aluno\AnamnesePge.aspx.cs">
       <DependentUpon>AnamnesePge.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -479,6 +562,13 @@
     </Compile>
     <Compile Include="Views\Aluno\EtapaPge.aspx.designer.cs">
       <DependentUpon>EtapaPge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Colaborador\ColaboradorPge.aspx.cs">
+      <DependentUpon>ColaboradorPge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Colaborador\ColaboradorPge.aspx.designer.cs">
+      <DependentUpon>ColaboradorPge.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Error\404.aspx.cs">
       <DependentUpon>404.aspx</DependentUpon>
@@ -499,6 +589,7 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Views\Aluno\AlunoPge.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -506,9 +597,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
@@ -545,7 +634,7 @@
     <PropertyGroup>
       <ErrorText>Este projeto faz referência a pacotes do NuGet que não estão presentes neste computador. Use a Restauração de Pacotes do NuGet para baixá-los.  Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkID=322105. O arquivo ausente é {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -67,6 +67,15 @@ namespace Twogether {
         protected global::Twogether.Components.Others.ChatDropdownUsc ChatDropdownUsc;
         
         /// <summary>
+        /// Controle mdl_control.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::Twogether.Components.Common.ModalUsc mdl_control;
+        
+        /// <summary>
         /// Controle MainContent.
         /// </summary>
         /// <remarks>

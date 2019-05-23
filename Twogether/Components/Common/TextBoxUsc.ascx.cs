@@ -23,13 +23,33 @@ namespace Twogether.Components.Common {
                 txt_control.TextMode = value;
             }
         }
-        
+
+        public Boolean Enable {
+            get {
+                return txt_control.Enabled;
+            }
+            set {
+                txt_control.ReadOnly = value;
+            }
+        }
+
+
+
         public String Value {
             get {
                 return txt_control.Text;
             }
             set {
                 txt_control.Text = value;
+            }
+        }
+
+        public String StaticValue {
+            get {
+                return Title + ": " + txt_control.Text;
+            }
+            set {
+                txt_control.Text = Title + ": " + value;
             }
         }
 

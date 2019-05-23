@@ -10,6 +10,14 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
+.login-marlon {
+    background-color: black !important;
+    background-image: url('../img/bg/bg9.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: top
+}
+
 html {
     color: #222;
     font-size: 1em;

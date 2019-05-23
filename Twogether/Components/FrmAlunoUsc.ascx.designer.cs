@@ -13,6 +13,15 @@ namespace Twogether.Components {
     public partial class FrmAlunoUsc {
         
         /// <summary>
+        /// Controle pnl_control.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnl_control;
+        
+        /// <summary>
         /// Controle lbl_control.
         /// </summary>
         /// <remarks>
@@ -74,24 +83,6 @@ namespace Twogether.Components {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::Twogether.Components.Common.TextBoxUsc txt_data;
-        
-        /// <summary>
-        /// Controle txt_peso.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::Twogether.Components.Common.TextBoxUsc txt_peso;
-        
-        /// <summary>
-        /// Controle txt_altura.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::Twogether.Components.Common.TextBoxUsc txt_altura;
         
         /// <summary>
         /// Controle btn_control.

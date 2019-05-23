@@ -1,5 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="WebMst.master.cs" Inherits="Twogether.WebMst" %>
 <%@ Import Namespace="System.Web.Optimization" %>
+<%@ Import Namespace="Twogether.Helpers" %>
 
 <!DOCTYPE html>
 <html lang="pt-Br">
@@ -13,7 +14,7 @@
 
     <!-- favicon
 		============================================ -->
-    <link rel="shortcut icon" type="image/x-icon"  href="<%=FormatUrl("/img/favicon2.ico") %>">
+    <link rel="shortcut icon" type="image/x-icon"  href="<%=Help.FormatUrl("/img/favicon2.ico") %>">
     <!-- Google Fonts
 		============================================ -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
@@ -33,7 +34,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="logo-area">
-                        <a href="/Default.aspx"><img src="<%=FormatUrl("/img/logo/logo2g.png") %>" alt="" /></a>
+                        <a href="/Default.aspx"><img src="<%=Help.FormatUrl("/img/logo/logo2g.png") %>" alt="" /></a>
                         
                     </div>
                 </div>
@@ -45,6 +46,7 @@
                             <usc:NotificationDropdownUsc runat="server" ID="NotificationDropdownUsc1"/>
                             <usc:PercentDropdownUsc runat="server" ID="PercentDropdownUsc1"/>
                             <usc:ChatDropdownUsc runat="server" ID="ChatDropdownUsc"/>
+                            <usc:ModalUsc runat="server" ID="mdl_control" IsTable ="true"/>
                         </ul>
                     </div>
                 </div>
