@@ -46,7 +46,6 @@
                             <usc:NotificationDropdownUsc runat="server" ID="NotificationDropdownUsc1"/>
                             <usc:PercentDropdownUsc runat="server" ID="PercentDropdownUsc1"/>
                             <usc:ChatDropdownUsc runat="server" ID="ChatDropdownUsc"/>
-                            <usc:ModalUsc runat="server" ID="mdl_control" IsTable ="true"/>
                         </ul>
                     </div>
                 </div>
@@ -71,6 +70,11 @@
             </div>
         </div>
     </div>
+        <footer>
+        
+    </footer>
+        
     </form>
 </body>
+    
 </html>

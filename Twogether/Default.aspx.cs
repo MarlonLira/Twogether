@@ -5,7 +5,8 @@ using System.Web.UI;
 namespace Twogether {
     public partial class Default : Page {
         protected void Page_Load(object sender, EventArgs e) {
-
+            WebMst Mst = new WebMst();
+            Mst.CatchChild("Erro", "Teste");
         }
 
         public String FormatUrl(String Url) {

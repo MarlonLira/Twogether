@@ -48,5 +48,47 @@ namespace Twogether.Helpers {
 
             return WebRow2;
         }
+
+        public static String TableLoad(DataTable Table, Boolean IsHtml) {
+            String TableHtml = "";
+            String HtmlInit = "<tr>";
+            String HtmlClose = "</tr>";
+
+            foreach (DataRow Row in Table.Rows) {
+                TableHtml += HtmlInit;
+                foreach (var Cell in Row.ItemArray) {
+                    TableHtml += "<td style =" + '"' + "background-color:lightgray" + '"'+ ">" + Convert.ToString(Cell) + "</td>";
+                }
+                TableHtml += HtmlClose;
+            }
+
+            return TableHtml;
+        }
+
+        public static String WordCheck(String Word) {
+            String WordType = "";
+
+            foreach (Char Letter in Word.ToCharArray()) {
+
+                if (Char.IsNumber(Letter)) {
+                    if (WordType == "Number" || String.IsNullOrEmpty(WordType)) {
+                        WordType = "Number";
+                    } else {
+                        WordType = "Erro";
+                        break;
+                    }
+                }
+                if (Char.IsLetter(Letter) && !Char.IsSymbol(Letter)) {
+                    if (WordType == "Letter" || String.IsNullOrEmpty(WordType)) {
+                        WordType = "Letter";
+                    } else {
+                        WordType = "Erro";
+                        break;
+                    }
+                }
+            }
+
+            return WordType;
+        }
     }
 }

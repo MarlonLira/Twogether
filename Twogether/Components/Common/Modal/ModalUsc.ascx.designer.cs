@@ -7,72 +7,63 @@
 // </gerado automaticamente>
 //------------------------------------------------------------------------------
 
-namespace Twogether {
+namespace Twogether.Components.Common.Modal {
     
     
-    public partial class WebMst {
+    public partial class ModalUsc {
         
         /// <summary>
-        /// Controle ScriptManager.
+        /// Controle btn_close_control.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.ScriptManager ScriptManager;
+        protected global::System.Web.UI.WebControls.Button btn_close_control;
         
         /// <summary>
-        /// Controle ButtonSearchUsc1.
+        /// Controle TableUsc.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Common.ButtonSearchUsc ButtonSearchUsc1;
+        protected global::Twogether.Components.Common.Table.TableUsc TableUsc;
         
         /// <summary>
-        /// Controle MsgDropdownUsc1.
+        /// Controle lbl_title_control.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Others.MsgDropdownUsc MsgDropdownUsc1;
+        protected global::System.Web.UI.WebControls.Label lbl_title_control;
         
         /// <summary>
-        /// Controle NotificationDropdownUsc1.
+        /// Controle lbl_control.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Others.NotificationDropdownUsc NotificationDropdownUsc1;
+        protected global::System.Web.UI.WebControls.Label lbl_control;
         
         /// <summary>
-        /// Controle PercentDropdownUsc1.
+        /// Controle btn_save_modal.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Others.PercentDropdownUsc PercentDropdownUsc1;
+        protected global::System.Web.UI.WebControls.Button btn_save_modal;
         
         /// <summary>
-        /// Controle ChatDropdownUsc.
+        /// Controle btn_close_modal.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Others.ChatDropdownUsc ChatDropdownUsc;
-        
-        /// <summary>
-        /// Controle MainContent.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.Button btn_close_modal;
     }
 }

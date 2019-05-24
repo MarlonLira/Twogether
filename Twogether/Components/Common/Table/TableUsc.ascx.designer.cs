@@ -7,36 +7,27 @@
 // </gerado automaticamente>
 //------------------------------------------------------------------------------
 
-namespace Twogether.Components.Common {
+namespace Twogether.Components.Common.Table {
     
     
-    public partial class ButtonSearchUsc {
+    public partial class TableUsc {
         
         /// <summary>
-        /// Controle mdl_control.
+        /// Controle th_control.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Common.Modal.ModalUsc mdl_control;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl th_control;
         
         /// <summary>
-        /// Controle txt_control.
+        /// Controle ltr_control.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_control;
-        
-        /// <summary>
-        /// Controle ModalUsc1.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::Twogether.Components.Common.Modal.ModalUsc ModalUsc1;
+        protected global::System.Web.UI.WebControls.Literal ltr_control;
     }
 }

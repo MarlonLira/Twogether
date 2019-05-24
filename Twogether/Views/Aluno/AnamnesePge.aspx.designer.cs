@@ -13,12 +13,12 @@ namespace Twogether.Views.Aluno {
     public partial class AnamnesePge {
         
         /// <summary>
-        /// Controle FrmParqUsc.
+        /// Controle tbl_control.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.FrmParqUsc FrmParqUsc;
+        protected global::Twogether.Components.Common.Table.TableUsc tbl_control;
     }
 }

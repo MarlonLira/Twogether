@@ -118,10 +118,10 @@
     <Content Include="Components\Common\CheckBoxUsc.ascx" />
     <Content Include="Components\Common\ChosenUsc.ascx" />
     <Content Include="Components\Common\DropDownUsc.ascx" />
-    <Content Include="Components\Common\ModalTableUsc.ascx" />
-    <Content Include="Components\Common\ModalUsc.ascx" />
+    <Content Include="Components\Common\Modal\ModalUsc.ascx" />
     <Content Include="Components\Common\NavWizardUsc.ascx" />
     <Content Include="Components\Common\RadioButtonUsc.ascx" />
+    <Content Include="Components\Common\Table\TableUsc.ascx" />
     <Content Include="Components\DialogForm.ascx" />
     <Content Include="Components\FrmAlunoPesquisarUsc.ascx" />
     <Content Include="Components\FrmAlunoUsc.ascx" />
@@ -133,7 +133,6 @@
     <Content Include="Components\Others\PercentDropdownUsc.ascx" />
     <Content Include="Components\Others\QuestionUsc.ascx" />
     <Content Include="Components\TableStripedUsc.ascx" />
-    <Content Include="Components\TableUsc.ascx" />
     <Content Include="Components\Common\TextBoxUsc.ascx" />
     <Content Include="Content\animate.css" />
     <Content Include="Content\animation\animation-custom.css" />
@@ -404,18 +403,11 @@
     <Compile Include="Components\Common\DropDownUsc.ascx.designer.cs">
       <DependentUpon>DropDownUsc.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Components\Common\ModalTableUsc.ascx.cs">
-      <DependentUpon>ModalTableUsc.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Components\Common\ModalTableUsc.ascx.designer.cs">
-      <DependentUpon>ModalTableUsc.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Components\Common\ModalUsc.ascx.cs">
+    <Compile Include="Components\Common\Modal\ModalUsc.ascx.cs">
       <DependentUpon>ModalUsc.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Components\Common\ModalUsc.ascx.designer.cs">
+    <Compile Include="Components\Common\Modal\ModalUsc.ascx.designer.cs">
       <DependentUpon>ModalUsc.ascx</DependentUpon>
     </Compile>
     <Compile Include="Components\Common\NavWizardUsc.ascx.cs">
@@ -431,6 +423,13 @@
     </Compile>
     <Compile Include="Components\Common\RadioButtonUsc.ascx.designer.cs">
       <DependentUpon>RadioButtonUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Common\Table\TableUsc.ascx.cs">
+      <DependentUpon>TableUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Common\Table\TableUsc.ascx.designer.cs">
+      <DependentUpon>TableUsc.ascx</DependentUpon>
     </Compile>
     <Compile Include="Components\DialogForm.ascx.cs">
       <DependentUpon>DialogForm.ascx</DependentUpon>
@@ -509,13 +508,6 @@
     <Compile Include="Components\TableStripedUsc.ascx.designer.cs">
       <DependentUpon>TableStripedUsc.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Components\TableUsc.ascx.cs">
-      <DependentUpon>TableUsc.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Components\TableUsc.ascx.designer.cs">
-      <DependentUpon>TableUsc.ascx</DependentUpon>
-    </Compile>
     <Compile Include="Components\Common\TextBoxUsc.ascx.cs">
       <DependentUpon>TextBoxUsc.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -542,13 +534,6 @@
       <DependentUpon>LoginPge.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\Aluno\AlunoPge.Master.cs">
-      <DependentUpon>AlunoPge.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Aluno\AlunoPge.Master.designer.cs">
-      <DependentUpon>AlunoPge.Master</DependentUpon>
-    </Compile>
     <Compile Include="Views\Aluno\AnamnesePge.aspx.cs">
       <DependentUpon>AnamnesePge.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -589,7 +574,6 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
-    <Content Include="Views\Aluno\AlunoPge.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

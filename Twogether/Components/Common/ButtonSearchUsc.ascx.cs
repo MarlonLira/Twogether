@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Web.UI;
 using Brasdat.Gestor.Library.Business.Classes.Fitness;
 using Brasdat.Gestor.Library.Core.Classes.Helpers;
+using Twogether.Helpers;
 
 namespace Twogether.Components.Common {
     public partial class ButtonSearchUsc : UserControl {
@@ -20,12 +21,16 @@ namespace Twogether.Components.Common {
 
         public void Carregar() {
             AlunoPst Aluno = null;
+            String WordResult = "";
             
+            DataTable Table;
             try {
-                DataTable Table = new DataTable();
+                Table = new DataTable();
                 Aluno = new AlunoPst();
-                Int32 Num = 0;
-                if (Char.IsDigit(txt_control.Text, 0)) {
+                
+                WordResult = Help.WordCheck(txt_control.Text);
+
+                if (WordResult == "Number") {
                     Table = Sql.ExecuteReader("SELECT * FROM [fitness].[viw_aluno] WHERE CODIGO = @matricula",
                             new List<SqlParameter>() {
                                 Sql.CreateVarcharParameter("@matricula", 25, Convert.ToString(txt_control.Text))
@@ -35,31 +40,40 @@ namespace Twogether.Components.Common {
                         Aluno.Preencher(Row);
                         break;
                     }
-                    Session.Add("Aluno", Aluno);
-                }else if (Char.IsLetter(txt_control.Text, 0)) {
 
-                    Table = Sql.ExecuteReader("SELECT [codigo], [nome], [tel_celular] FROM [fitness].[viw_aluno] WHERE nome like (%@nome%)",
+                    Session.Add("Aluno", Aluno);
+
+                }else if (WordResult == "Letter") {
+
+                    Table = Sql.ExecuteReader("SELECT [codigo], [nome], [tel_celular] FROM [fitness].[viw_aluno] WHERE NOME LIKE @nome",
                             new List<SqlParameter>() {
-                                Sql.CreateVarcharParameter("@nome", 25, Convert.ToString(txt_control.Text))
+                                Sql.CreateVarcharParameter("@nome", 25, "%" + Convert.ToString(txt_control.Text) + "%")
                             });
 
-                    foreach (DataRow Row in Table.Rows) {
-                        Aluno.Preencher(Row);
-                        break;
-                    }
-                    Session.Add("Table", Aluno);
+                    //Table = Sql.ExecuteReader("SELECT [codigo], [nome], [tel_celular] FROM [fitness].[tbl_aluno] WHERE nome like '%" + Convert.ToString(txt_control.Text) +"%'");
 
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "ModalTable", "$(function(){$('#ModalTable').modal('show');})", true);
+                    Session.Add("Table", Table);
+                    //Response.Redirect("~/Views/Aluno/AnamnesePge.aspx", false);
+                    Session.Add("IsTable", true);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "ModalUsc", "$(function(){$('#ModalUsc').modal('show');})", true);
+                } else {
+                    Session.Add("IsErro", true);
+                    throw new Exception("Foi digitado um valor invalido!");
                 }
 
-                Response.Redirect("~/Views/Aluno/EtapaPge.aspx", false);
+                if (!String.IsNullOrEmpty(Aluno.Nome)) {
+                    Response.Redirect("~/Views/Aluno/EtapaPge.aspx", false);
+                } else if(String.IsNullOrEmpty(Aluno.Nome) && WordResult == "Number") {
+                    Session.Add("IsErro", true);
+                    throw new Exception("O Aluno não foi encontrado!");
+                }
 
             } catch (Exception Err) {
-                ltr_control.Text = "<H1> " + Err.Message + "</H1>";
-                WebMst Master = new WebMst();
-                Master.CatchChild("Um erro foi encontrato !", Err.Message + " " + Err.InnerException);
-                
-                //ScriptManager.RegisterStartupScript(this, this.GetType(), "myModalnine", "$(function(){$('#myModalnine').modal('show');})", true);
+                Session.Add("IsErro", true);
+                /*mdl_control.Title = "Erro";
+                mdl_control.Text = Err.Message;*/
+
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "ModalUsc", "$(function(){$('#ModalUsc').modal('show');})", true);
             }
         }
 

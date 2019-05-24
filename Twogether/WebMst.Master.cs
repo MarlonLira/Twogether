@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Web.UI;
+using Twogether.Components.Common;
 
 namespace Twogether {
     public partial class WebMst : MasterPage {
@@ -11,13 +12,16 @@ namespace Twogether {
             /*if (Global.Funcionario == null & Global.Aluno == null) {
                 Response.Redirect("~/LoginPge.aspx", false);
             }*/
+
+            //ScriptManager.RegisterStartupScript(this, this.GetType(), "myModalnine", "$(function(){$('#myModalnine').modal('show');})", true);
         }
 
         public void CatchChild(String Title, String Text) {
-            /*mdl_control.Title = Title;
-            mdl_control.Text = Text;
+            /*ModalUsc modal = new ModalUsc();
+            modal.Attributes.Add("Title", Title);
+            modal.Attributes.Add("Text", Text);*/
 
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "myModalnine", "$(function(){$('#myModalnine').modal('show');})", true);*/
+            //ScriptManager.RegisterStartupScript(this, this.GetType(), "myModalnine", "$(function(){$('#myModalnine').modal('show');})", true);
         }
     }
 }
