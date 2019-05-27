@@ -7,8 +7,8 @@
                 <asp:Button ID="btn_close_control" runat="server" Text="&times;" class="close" data-dismiss="modal" />
             </div>
             <div class="modal-body">
-                <% if (Session["IsTable"] != null) {%>
-                    <usc:TableUsc runat="server" ID="TableUsc" Scale="8"/>
+                <% if (this.IsTable) {%>
+                    <usc:TableUsc runat="server" ID="TableUsc" Scale="8" Colunas="Codigo/Nome/Telefone"/>
                 <%} %>
 
                 <h2><asp:Label ID="lbl_title_control" runat="server"></asp:Label></h2>

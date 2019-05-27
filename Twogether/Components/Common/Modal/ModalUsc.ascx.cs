@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Web.UI;
 
 namespace Twogether.Components.Common.Modal {
@@ -25,27 +26,68 @@ namespace Twogether.Components.Common.Modal {
             }
         }
 
-        public Boolean IsTable { get; set; }
+        public Boolean IsTable {
+            get {
+                Object Result = Session["IsTable"];
+                if (Result == null) {
+                    Result = false;
+                }
+                return Convert.ToBoolean(Result);
+            }
+            set {
+                Session["IsTable"] = value;
+            }
+        }
 
         public Boolean IsError { get; set; }
 
 
         public void LoadModal() {
 
-            if (Session["IsTable"] != null) {
+            Boolean UseSearchEvent = IsPostBack;
 
-                IsTable = (Boolean)Session["IsTable"];
+            Response.Write(@"<b style='color: white'>" + Convert.ToString(UseSearchEvent) + @"</b>");
 
-            } else {
-                IsTable = false;
+            /*
+            if (!String.IsNullOrEmpty(Request.Params["__EVENTTARGET"])) {
+                if (Request.Params["__EVENTTARGET"].IndexOf("", StringComparison.InvariantCultureIgnoreCase) > -1) {
+                    UseSearchEvent = true;
+
+                }
             }
+            */
+            if (UseSearchEvent) {
+
+                ButtonSearchUsc btnSearch = ((WebMst)this.Page.Master).btnSearch;
+                if (btnSearch != null) {
+                    DataTable TableAlu = null;
+                    btnSearch.Carregar(out TableAlu);
+                    if (TableAlu != null && TableAlu.Rows.Count > 0) {
+                        TableUsc.Colunas = "Codigo/Nome/Telefone";
+                        TableUsc.LoadDataSource(TableAlu);
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "ModalUsc", "$(function(){$('#ModalUsc').modal('show');})", true);
+                        IsTable = true;
+                    }
+                }
+
+            }
+            /*
+                if (Session["IsTable"] != null) {
+
+                    IsTable = (Boolean)Session["IsTable"];
+
+                } else {
+                    IsTable = false;
+                }
+                */
 
             if (Session["IsErro"] != null) {
                 IsError = (Boolean)Session["IsErro"];
                 btn_save_modal.Visible = false;
             }
 
+
         }
-        
+
     }
 }

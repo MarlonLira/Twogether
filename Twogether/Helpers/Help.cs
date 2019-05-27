@@ -51,16 +51,34 @@ namespace Twogether.Helpers {
 
         public static String TableLoad(DataTable Table, Boolean IsHtml) {
             String TableHtml = "";
-            String HtmlInit = "<tr>";
-            String HtmlClose = "</tr>";
+            String InitTr = "<tr>";
+            String CloseTr = "</tr>";
+            String InitTd = "<td>";
+            String CloseTd = "</td>";
 
             foreach (DataRow Row in Table.Rows) {
-                TableHtml += HtmlInit;
+                TableHtml += InitTr;
                 foreach (var Cell in Row.ItemArray) {
-                    TableHtml += "<td style =" + '"' + "background-color:lightgray" + '"'+ ">" + Convert.ToString(Cell) + "</td>";
+                    TableHtml += InitTd + Convert.ToString(Cell) + CloseTd;
                 }
-                TableHtml += HtmlClose;
+                TableHtml += CloseTr;
             }
+
+            return TableHtml;
+        }
+
+        public static String TableLoad(String [] Colunas, Boolean IsHtml) {
+            String TableHtml = "";
+            String InitTr = "<tr>";
+            String CloseTr = "</tr>";
+            String InitTh = "<th>";
+            String CloseTh = "</th>";
+
+            TableHtml += InitTr;
+            foreach (String Row in Colunas) {
+                TableHtml += InitTh + Convert.ToString(Row) + CloseTh;
+            }
+            TableHtml += CloseTr;
 
             return TableHtml;
         }

@@ -5,6 +5,12 @@ using Twogether.Components.Common;
 namespace Twogether {
     public partial class WebMst : MasterPage {
 
+        public ButtonSearchUsc btnSearch {
+            get {
+                return this.ButtonSearchUsc1;
+            }
+        }
+
         public String Usuario() {
             return (Global.Funcionario != null ? Global.Funcionario.Nome : "");
         }

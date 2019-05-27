@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Web.SessionState;
 using System.Web.UI;
 using Brasdat.Gestor.Library.Business.Classes.Fitness;
 using Brasdat.Gestor.Library.Core.Classes.Helpers;
@@ -19,14 +20,15 @@ namespace Twogether.Components.Common {
             return (Global.Funcionario != null ? Global.Funcionario.Nome : "");
         }
 
-        public void Carregar() {
+        public void Carregar(out DataTable Table) {
             AlunoPst Aluno = null;
             String WordResult = "";
-            
-            DataTable Table;
+
+            Table = new DataTable();
+            Aluno = new AlunoPst();
+
+            //DataTable Table;
             try {
-                Table = new DataTable();
-                Aluno = new AlunoPst();
                 
                 WordResult = Help.WordCheck(txt_control.Text);
 
@@ -50,12 +52,10 @@ namespace Twogether.Components.Common {
                                 Sql.CreateVarcharParameter("@nome", 25, "%" + Convert.ToString(txt_control.Text) + "%")
                             });
 
-                    //Table = Sql.ExecuteReader("SELECT [codigo], [nome], [tel_celular] FROM [fitness].[tbl_aluno] WHERE nome like '%" + Convert.ToString(txt_control.Text) +"%'");
-
                     Session.Add("Table", Table);
                     //Response.Redirect("~/Views/Aluno/AnamnesePge.aspx", false);
                     Session.Add("IsTable", true);
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "ModalUsc", "$(function(){$('#ModalUsc').modal('show');})", true);
+                    //ScriptManager.RegisterStartupScript(this, this.GetType(), "ModalUsc", "$(function(){$('#ModalUsc').modal('show');})", true);
                 } else {
                     Session.Add("IsErro", true);
                     throw new Exception("Foi digitado um valor invalido!");
@@ -73,12 +73,12 @@ namespace Twogether.Components.Common {
                 /*mdl_control.Title = "Erro";
                 mdl_control.Text = Err.Message;*/
 
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "ModalUsc", "$(function(){$('#ModalUsc').modal('show');})", true);
+                //ScriptManager.RegisterStartupScript(this, this.GetType(), "ModalUsc", "$(function(){$('#ModalUsc').modal('show');})", true);
             }
         }
 
         protected void txt_control_TextChanged(object sender, EventArgs e) {
-            Carregar();
+            //Carregar();
         }
     }
 }
