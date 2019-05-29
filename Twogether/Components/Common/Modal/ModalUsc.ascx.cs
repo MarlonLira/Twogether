@@ -46,7 +46,7 @@ namespace Twogether.Components.Common.Modal {
 
             Boolean UseSearchEvent = IsPostBack;
 
-            Response.Write(@"<b style='color: white'>" + Convert.ToString(UseSearchEvent) + @"</b>");
+            //Response.Write(@"<b style='color: white'>" + Convert.ToString(UseSearchEvent) + @"</b>");
 
             /*
             if (!String.IsNullOrEmpty(Request.Params["__EVENTTARGET"])) {
@@ -63,13 +63,18 @@ namespace Twogether.Components.Common.Modal {
                     DataTable TableAlu = null;
                     btnSearch.Carregar(out TableAlu);
                     if (TableAlu != null && TableAlu.Rows.Count > 0) {
-                        TableUsc.Colunas = "Codigo/Nome/Telefone";
+
+                        TableUsc.Colunas =  new String[] {
+                            "Codigo",
+                            "Nome",
+                            "Telefone"
+                        };
+
                         TableUsc.LoadDataSource(TableAlu);
                         ScriptManager.RegisterStartupScript(this, this.GetType(), "ModalUsc", "$(function(){$('#ModalUsc').modal('show');})", true);
                         IsTable = true;
                     }
                 }
-
             }
             /*
                 if (Session["IsTable"] != null) {

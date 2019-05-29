@@ -8,7 +8,7 @@
             </div>
             <div class="modal-body">
                 <% if (this.IsTable) {%>
-                    <usc:TableUsc runat="server" ID="TableUsc" Scale="8" Colunas="Codigo/Nome/Telefone"/>
+                    <usc:TableUsc runat="server" ID="TableUsc" Scale="8"/>
                 <%} %>
 
                 <h2><asp:Label ID="lbl_title_control" runat="server"></asp:Label></h2>

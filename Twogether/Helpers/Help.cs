@@ -58,6 +58,7 @@ namespace Twogether.Helpers {
 
             foreach (DataRow Row in Table.Rows) {
                 TableHtml += InitTr;
+                
                 foreach (var Cell in Row.ItemArray) {
                     TableHtml += InitTd + Convert.ToString(Cell) + CloseTd;
                 }
