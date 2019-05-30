@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Web.UI;
+using Twogether.Helpers;
 
 namespace Twogether.Components.Common.Modal {
     public partial class ModalUsc : UserControl {
@@ -26,73 +27,46 @@ namespace Twogether.Components.Common.Modal {
             }
         }
 
-        public Boolean IsTable {
-            get {
-                Object Result = Session["IsTable"];
-                if (Result == null) {
-                    Result = false;
-                }
-                return Convert.ToBoolean(Result);
-            }
-            set {
-                Session["IsTable"] = value;
-            }
-        }
+        public Boolean IsTable { get; set; }
 
         public Boolean IsError { get; set; }
 
 
-        public void LoadModal() {
+        public void LoadModal(String msg = "") {
+            
+            if (IsPostBack) {
 
-            Boolean UseSearchEvent = IsPostBack;
+                try {
+                    
+                    ButtonSearchUsc btnSearch = ((WebMst)this.Page.Master).btnSearch;
+                    if (btnSearch != null) {
 
-            //Response.Write(@"<b style='color: white'>" + Convert.ToString(UseSearchEvent) + @"</b>");
+                        DataTable TableAlu = null;
+                        btnSearch.Carregar(out TableAlu);
 
-            /*
-            if (!String.IsNullOrEmpty(Request.Params["__EVENTTARGET"])) {
-                if (Request.Params["__EVENTTARGET"].IndexOf("", StringComparison.InvariantCultureIgnoreCase) > -1) {
-                    UseSearchEvent = true;
+                        if (TableAlu != null) {
 
-                }
-            }
-            */
-            if (UseSearchEvent) {
+                            if (TableAlu != null && TableAlu.Rows.Count > 0) {
 
-                ButtonSearchUsc btnSearch = ((WebMst)this.Page.Master).btnSearch;
-                if (btnSearch != null) {
-                    DataTable TableAlu = null;
-                    btnSearch.Carregar(out TableAlu);
-                    if (TableAlu != null && TableAlu.Rows.Count > 0) {
-
-                        TableUsc.Colunas =  new String[] {
-                            "Codigo",
-                            "Nome",
-                            "Telefone"
-                        };
-
-                        TableUsc.LoadDataSource(TableAlu);
-                        ScriptManager.RegisterStartupScript(this, this.GetType(), "ModalUsc", "$(function(){$('#ModalUsc').modal('show');})", true);
-                        IsTable = true;
+                                TableUsc.Colunas = new String[] {
+                                    "Codigo",
+                                    "Nome",
+                                    "Telefone"
+                                };
+                                TableUsc.LoadDataSource(Help.TableFormat(TableUsc.Colunas, TableAlu));
+                                IsTable = true;
+                            }
+                            ScriptManager.RegisterStartupScript(this, this.GetType(), "ModalUsc", "$(function(){$('#ModalUsc').modal('show');})", true);
+                        }
                     }
-                }
+                    
+                } catch (Exception Err) {
+                    btn_save_modal.Visible = false;
+                    this.Title = "Error";
+                    this.Text = Err.Message;
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "ModalUsc", "$(function(){$('#ModalUsc').modal('show');})", true);
+                } 
             }
-            /*
-                if (Session["IsTable"] != null) {
-
-                    IsTable = (Boolean)Session["IsTable"];
-
-                } else {
-                    IsTable = false;
-                }
-                */
-
-            if (Session["IsErro"] != null) {
-                IsError = (Boolean)Session["IsErro"];
-                btn_save_modal.Visible = false;
-            }
-
-
         }
-
     }
 }

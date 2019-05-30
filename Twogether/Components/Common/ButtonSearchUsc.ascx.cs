@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Web.SessionState;
 using System.Web.UI;
 using Brasdat.Gestor.Library.Business.Classes.Fitness;
 using Brasdat.Gestor.Library.Core.Classes.Helpers;
+using Twogether.Components.Common.Modal;
 using Twogether.Helpers;
 
 namespace Twogether.Components.Common {
@@ -18,6 +18,12 @@ namespace Twogether.Components.Common {
 
         public String Usuario() {
             return (Global.Funcionario != null ? Global.Funcionario.Nome : "");
+        }
+
+        public ModalUsc mdlControl {
+            get {
+                return this.mdl_control;
+            }
         }
 
         public void Carregar(out DataTable Table) {
@@ -47,38 +53,25 @@ namespace Twogether.Components.Common {
 
                 }else if (WordResult == "Letter") {
 
-                    Table = Sql.ExecuteReader("SELECT [codigo], [nome], [tel_celular] FROM [fitness].[viw_aluno] WHERE NOME LIKE @nome",
+                    Table = Sql.ExecuteReader("SELECT * FROM [fitness].[viw_aluno] WHERE NOME LIKE @nome AND EMPRESA_ID = @empresa_id",
                             new List<SqlParameter>() {
-                                Sql.CreateVarcharParameter("@nome", 25, "%" + Convert.ToString(txt_control.Text) + "%")
+                                Sql.CreateVarcharParameter("@nome", 25, "%" + Convert.ToString(txt_control.Text) + "%"),
+                                Sql.CreateNumericParameter("@empresa_id", Global.Funcionario.Empresa.Id, false)
                             });
 
-                    Session.Add("Table", Table);
-                    //Response.Redirect("~/Views/Aluno/AnamnesePge.aspx", false);
-                    Session.Add("IsTable", true);
-                    //ScriptManager.RegisterStartupScript(this, this.GetType(), "ModalUsc", "$(function(){$('#ModalUsc').modal('show');})", true);
                 } else {
-                    Session.Add("IsErro", true);
                     throw new Exception("Foi digitado um valor invalido!");
                 }
 
                 if (!String.IsNullOrEmpty(Aluno.Nome)) {
                     Response.Redirect("~/Views/Aluno/EtapaPge.aspx", false);
                 } else if(String.IsNullOrEmpty(Aluno.Nome) && WordResult == "Number") {
-                    Session.Add("IsErro", true);
-                    throw new Exception("O Aluno não foi encontrado!");
+                    throw new Exception("O Aluno não foi encontrado! Verifique se a matricula informada é valida.");
                 }
 
             } catch (Exception Err) {
-                Session.Add("IsErro", true);
-                /*mdl_control.Title = "Erro";
-                mdl_control.Text = Err.Message;*/
-
-                //ScriptManager.RegisterStartupScript(this, this.GetType(), "ModalUsc", "$(function(){$('#ModalUsc').modal('show');})", true);
-            }
-        }
-
-        protected void txt_control_TextChanged(object sender, EventArgs e) {
-            //Carregar();
+                throw new Exception(Err.Message);
+            } 
         }
     }
 }

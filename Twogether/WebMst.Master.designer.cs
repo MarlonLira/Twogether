@@ -22,13 +22,13 @@ namespace Twogether {
         protected global::System.Web.UI.ScriptManager ScriptManager;
         
         /// <summary>
-        /// Controle ButtonSearchUsc1.
+        /// Controle btn_Search_control.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Common.ButtonSearchUsc ButtonSearchUsc1;
+        protected global::Twogether.Components.Common.ButtonSearchUsc btn_Search_control;
         
         /// <summary>
         /// Controle MsgDropdownUsc1.

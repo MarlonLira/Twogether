@@ -14,7 +14,6 @@ namespace Twogether {
             ColaboradorEntrar(txt_nome.Value, txt_senha.Value);
         }
 
-
         private void ColaboradorEntrar(String ContaAcesso, String Senha) {
             FuncionarioPst Funcionario = null;
             String Advertencia = "";

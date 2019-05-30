@@ -2,6 +2,8 @@
 using System.Data;
 using System.Web;
 using System.Web.UI.WebControls;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace Twogether.Helpers {
     public static class Help {
@@ -47,6 +49,34 @@ namespace Twogether.Helpers {
             }
 
             return WebRow2;
+        }
+
+        public static DataTable TableFormat(String[] Colunas, DataTable TableAux) {
+            DataTable TableFormat = TableAux;
+            var DeleteColumns = new List<String>();
+            var SelectColumn = new List<String>();
+
+            foreach (String Col in Colunas) {
+                if (Col.ToUpper() == "TELEFONE") {
+                    SelectColumn.Add("TEL_CELULAR");
+                }
+                if (Col.ToUpper() == "MATRICULA") {
+                    SelectColumn.Add("CODIGO");
+                }
+                SelectColumn.Add(Col.ToUpper());
+            }
+
+            foreach (DataColumn Column in TableFormat.Columns) {
+                if (!SelectColumn.Contains(Convert.ToString(Column).ToUpper())) {
+                    DeleteColumns.Add(Convert.ToString(Column));
+                }
+            }
+
+            foreach (String ColumnDeleted in DeleteColumns) {
+                TableFormat.Columns.Remove(Convert.ToString(ColumnDeleted));
+            }
+
+            return TableFormat;
         }
 
         public static String TableLoad(DataTable Table, Boolean IsHtml) {
