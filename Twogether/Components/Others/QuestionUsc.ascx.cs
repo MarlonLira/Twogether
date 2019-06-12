@@ -1,17 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Twogether.Components.Others {
-    public partial class QuestionUsc : System.Web.UI.UserControl {
+    public partial class QuestionUsc : UserControl {
         protected void Page_Load(object sender, EventArgs e) {
             lbl_control.Text = Question();
         }
 
         public Int16 NumQuestion { get; set; }
+
+        public String Resposta { get {
+                return rb_control.SelectValue;
+            } }
 
         public String Question() {
             String SelectedQuestion = "Questão não encontrada";

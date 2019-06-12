@@ -7,117 +7,126 @@
 // </gerado automaticamente>
 //------------------------------------------------------------------------------
 
-namespace Twogether.Components {
+namespace Twogether.Views.Colaborador {
     
     
-    public partial class FrmParqUsc {
+    public partial class EtapaPge {
         
         /// <summary>
-        /// Controle pnlParq.
+        /// Controle FrmAlunoUsc.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlParq;
+        protected global::Twogether.Components.FrmAlunoUsc FrmAlunoUsc;
         
         /// <summary>
-        /// Controle QuestionUsc3.
+        /// Controle pnl_control.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Others.QuestionUsc QuestionUsc3;
+        protected global::System.Web.UI.WebControls.Panel pnl_control;
         
         /// <summary>
-        /// Controle QuestionUsc4.
+        /// Controle tbpEtapa1.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Others.QuestionUsc QuestionUsc4;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl tbpEtapa1;
         
         /// <summary>
-        /// Controle QuestionUsc5.
+        /// Controle tbpEtapa2.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Others.QuestionUsc QuestionUsc5;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl tbpEtapa2;
         
         /// <summary>
-        /// Controle QuestionUsc6.
+        /// Controle tbpEtapa3.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Others.QuestionUsc QuestionUsc6;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl tbpEtapa3;
         
         /// <summary>
-        /// Controle QuestionUsc1.
+        /// Controle tbpEtapa4.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Others.QuestionUsc QuestionUsc1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl tbpEtapa4;
         
         /// <summary>
-        /// Controle QuestionUsc7.
+        /// Controle tbpEtapa5.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Others.QuestionUsc QuestionUsc7;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl tbpEtapa5;
         
         /// <summary>
-        /// Controle QuestionUsc8.
+        /// Controle tbpEtapa6.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Others.QuestionUsc QuestionUsc8;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl tbpEtapa6;
         
         /// <summary>
-        /// Controle QuestionUsc9.
+        /// Controle tbpEtapa7.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Others.QuestionUsc QuestionUsc9;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl tbpEtapa7;
         
         /// <summary>
-        /// Controle QuestionUsc10.
+        /// Controle pnl_parq.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Others.QuestionUsc QuestionUsc10;
+        protected global::System.Web.UI.WebControls.Panel pnl_parq;
         
         /// <summary>
-        /// Controle QuestionUsc2.
+        /// Controle FrmParqUsc1.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Others.QuestionUsc QuestionUsc2;
+        protected global::Twogether.Components.FrmParqUsc FrmParqUsc1;
         
         /// <summary>
-        /// Controle btn_confirmar.
+        /// Controle pnl_impedancia.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Common.Button.ButtonUsc btn_confirmar;
+        protected global::System.Web.UI.WebControls.Panel pnl_impedancia;
+        
+        /// <summary>
+        /// Controle FrmImpedanciaUsc.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::Twogether.Components.FrmImpedanciaUsc FrmImpedanciaUsc;
     }
 }

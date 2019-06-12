@@ -9,6 +9,11 @@ namespace Twogether.Components.Common {
 
         public String Titles { get; set; }
 
+       public String SelectValue { get {
+                return rb_control.SelectedValue;
+            }
+       }
+
         public void LoadTitle() {
             String[] Title;
             if (!String.IsNullOrEmpty(Titles)) {

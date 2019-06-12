@@ -22,49 +22,49 @@ namespace Twogether {
         protected global::System.Web.UI.ScriptManager ScriptManager;
         
         /// <summary>
-        /// Controle btn_Search_control.
+        /// Controle btn_search_control.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Common.ButtonSearchUsc btn_Search_control;
+        protected global::Twogether.Components.Common.Button.ButtonSearchUsc btn_search_control;
         
         /// <summary>
-        /// Controle MsgDropdownUsc1.
+        /// Controle btn_msgDropdown_control.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Others.MsgDropdownUsc MsgDropdownUsc1;
+        protected global::Twogether.Components.Others.MsgDropdownUsc btn_msgDropdown_control;
         
         /// <summary>
-        /// Controle NotificationDropdownUsc1.
+        /// Controle btn_notificationDropdown_control.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Others.NotificationDropdownUsc NotificationDropdownUsc1;
+        protected global::Twogether.Components.Others.NotificationDropdownUsc btn_notificationDropdown_control;
         
         /// <summary>
-        /// Controle PercentDropdownUsc1.
+        /// Controle btn_percentDropdown_control.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Others.PercentDropdownUsc PercentDropdownUsc1;
+        protected global::Twogether.Components.Others.PercentDropdownUsc btn_percentDropdown_control;
         
         /// <summary>
-        /// Controle ChatDropdownUsc.
+        /// Controle btn_chatDropdown_control.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Others.ChatDropdownUsc ChatDropdownUsc;
+        protected global::Twogether.Components.Others.ChatDropdownUsc btn_chatDropdown_control;
         
         /// <summary>
         /// Controle MainContent.

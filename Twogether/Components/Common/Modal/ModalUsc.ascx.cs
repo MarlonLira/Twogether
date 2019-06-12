@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Web.UI;
+using Twogether.Components.Common.Button;
 using Twogether.Helpers;
 
 namespace Twogether.Components.Common.Modal {
@@ -33,12 +34,12 @@ namespace Twogether.Components.Common.Modal {
 
 
         public void LoadModal(String msg = "") {
-            
-            if (IsPostBack) {
+            ButtonSearchUsc btnSearch = ((WebMst)this.Page.Master).btnSearch;
+
+            if (IsPostBack && !String.IsNullOrEmpty(btnSearch.TextSearch)) {
 
                 try {
-                    
-                    ButtonSearchUsc btnSearch = ((WebMst)this.Page.Master).btnSearch;
+
                     if (btnSearch != null) {
 
                         DataTable TableAlu = null;

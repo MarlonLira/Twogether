@@ -28,7 +28,7 @@ namespace Twogether {
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Common.TextBoxUsc txt_nome;
+        protected global::Twogether.Components.Common.Text.TextBoxUsc txt_nome;
         
         /// <summary>
         /// Controle txt_senha.
@@ -37,7 +37,7 @@ namespace Twogether {
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Common.TextBoxUsc txt_senha;
+        protected global::Twogether.Components.Common.Text.TextBoxUsc txt_senha;
         
         /// <summary>
         /// Controle btn_entrar.

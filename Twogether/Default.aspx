@@ -45,7 +45,9 @@
                             <ul class="notika-main-menu-dropdown" >
                                 <li><a href="<%=FormatUrl("/Views/Aluno/AnamnesePge.aspx") %>">Anamnese</a>
                                 </li>
-                                <li><a href="<%=FormatUrl("/Views/Aluno/EtapaPge.aspx") %>">Bioimpedância</a>
+                                <li><a href="<%=FormatUrl("/Views/Colaborador/EtapaPge.aspx") %>">Bioimpedância</a>
+                                </li>
+                                <li><a href="<%=FormatUrl("/Views/Colaborador/ColaboradorPge.aspx") %>">Colaborador</a>
                                 </li>
                             </ul>
                         </div>

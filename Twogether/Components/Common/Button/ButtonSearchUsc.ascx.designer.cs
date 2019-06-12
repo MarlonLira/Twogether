@@ -7,18 +7,27 @@
 // </gerado automaticamente>
 //------------------------------------------------------------------------------
 
-namespace Twogether.Views.Colaborador {
+namespace Twogether.Components.Common.Button {
     
     
-    public partial class ColaboradorPge {
+    public partial class ButtonSearchUsc {
         
         /// <summary>
-        /// Controle ChartsUsc.
+        /// Controle mdl_control.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Common.Charts.ChartsUsc ChartsUsc;
+        protected global::Twogether.Components.Common.Modal.ModalUsc mdl_control;
+        
+        /// <summary>
+        /// Controle txt_control.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_control;
     }
 }

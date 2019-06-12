@@ -139,5 +139,42 @@ namespace Twogether.Helpers {
 
             return WordType;
         }
+
+        public static String ChartsLoad() {
+            String Result = "";
+            //Colors
+            String ColorGreen = "'rgba(75, 192, 192, 0.2)'";
+            String ColorBlue = "'rgb(50,205,50, 0.2)'";
+            String ColorYellow = "'rgba(255, 206, 86, 0.2)'";
+            String ColorPurple = "rgba(153, 102, 255, 0.2)";
+            String ColorOrange = "'rgba(255, 159, 64, 0.2)'";
+            String ColorRed = "'rgba(255, 99, 132, 0.2)'";
+
+            String Function = "(function($) {" + '"' + "use strict "+ '"' + ';';
+            String Ctx = "var ctx = document.getElementById(" + '"' + "barchart1" + '"' + ");";
+            String Charts_control = "var charts_control = new Chart(ctx, {";
+            String Type = "type: 'bar',";
+            String DataInit = "data: { ";
+            String Labels = "labels: [" + '"' + "Blue" + '"' + "," + '"' + "Green" +'"' + ',' +  '"' + "Yellow" + '"' + ',' +  '"' + "Red" + '"' + "],";
+            String Datasets = "datasets: [{ label: 'Bar Chart',";
+            String Data = "data: [20, 19, 3, 5, 8, 9],";
+            String BgColor = "backgroundColor: [" +
+                 ColorRed + ','+ ColorGreen + ',' + 
+                "'rgb(50,205,50, 0.2)'," +
+                "'rgba(255, 206, 86, 0.2)'," +
+                "'rgba(75, 192, 192, 0.2)'" +
+                "],";
+            String BdrColor = "borderColor: ["+
+                "'rgba(255,99,132,1)',"+
+                "'rgba(54, 162, 235, 1)',"+
+                "'rgba(255, 206, 86, 1)',"+
+                "'rgba(75, 192, 192, 1)'"+
+                "],";
+            String BdrWidth = "borderWidth: 1 }] }, options: {scales: {yAxes: [{ticks: { beginAtZero: true } }] } } }); })(jQuery);";
+
+
+            Result = Function + Ctx + Charts_control + Type + DataInit + Labels + Datasets + Data + BgColor + BdrColor + BdrWidth;
+            return Result;
+        }
     }
 }

@@ -112,12 +112,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Components\Common\ButtonReportUsc.ascx" />
-    <Content Include="Components\Common\ButtonSearchUsc.ascx" />
-    <Content Include="Components\Common\ButtonUsc.ascx" />
+    <Content Include="Components\Common\Button\ButtonReportUsc.ascx" />
+    <Content Include="Components\Common\Button\ButtonSearchUsc.ascx" />
+    <Content Include="Components\Common\Button\ButtonUsc.ascx" />
+    <Content Include="Components\Common\Charts\ChartsUsc.ascx" />
     <Content Include="Components\Common\CheckBoxUsc.ascx" />
-    <Content Include="Components\Common\ChosenUsc.ascx" />
-    <Content Include="Components\Common\DropDownUsc.ascx" />
+    <Content Include="Components\Common\DropDown\ChosenUsc.ascx" />
+    <Content Include="Components\Common\DropDown\DropDownUsc.ascx" />
+    <Content Include="Components\Common\DropDown\SelectUsc.ascx" />
     <Content Include="Components\Common\Modal\ModalUsc.ascx" />
     <Content Include="Components\Common\NavWizardUsc.ascx" />
     <Content Include="Components\Common\RadioButtonUsc.ascx" />
@@ -133,7 +135,7 @@
     <Content Include="Components\Others\PercentDropdownUsc.ascx" />
     <Content Include="Components\Others\QuestionUsc.ascx" />
     <Content Include="Components\TableStripedUsc.ascx" />
-    <Content Include="Components\Common\TextBoxUsc.ascx" />
+    <Content Include="Components\Common\Text\TextBoxUsc.ascx" />
     <Content Include="Content\animate.css" />
     <Content Include="Content\animation\animation-custom.css" />
     <Content Include="Content\bootstrap-grid.css" />
@@ -346,6 +348,7 @@
     <Content Include="Views\Aluno\AnamnesePge.aspx" />
     <Content Include="Views\Aluno\EtapaPge.aspx" />
     <Content Include="Views\Colaborador\ColaboradorPge.aspx" />
+    <Content Include="Views\Colaborador\EtapaPge.aspx" />
     <Content Include="Views\Error\404.aspx" />
     <Content Include="Web.config" />
     <Content Include="Scripts\umd\popper.min.js.map" />
@@ -361,26 +364,33 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="Components\Common\ButtonReportUsc.ascx.cs">
+    <Compile Include="Components\Common\Button\ButtonReportUsc.ascx.cs">
       <DependentUpon>ButtonReportUsc.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Components\Common\ButtonReportUsc.ascx.designer.cs">
+    <Compile Include="Components\Common\Button\ButtonReportUsc.ascx.designer.cs">
       <DependentUpon>ButtonReportUsc.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Components\Common\ButtonSearchUsc.ascx.cs">
+    <Compile Include="Components\Common\Button\ButtonSearchUsc.ascx.cs">
       <DependentUpon>ButtonSearchUsc.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Components\Common\ButtonSearchUsc.ascx.designer.cs">
+    <Compile Include="Components\Common\Button\ButtonSearchUsc.ascx.designer.cs">
       <DependentUpon>ButtonSearchUsc.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Components\Common\ButtonUsc.ascx.cs">
+    <Compile Include="Components\Common\Button\ButtonUsc.ascx.cs">
       <DependentUpon>ButtonUsc.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Components\Common\ButtonUsc.ascx.designer.cs">
+    <Compile Include="Components\Common\Button\ButtonUsc.ascx.designer.cs">
       <DependentUpon>ButtonUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Common\Charts\ChartsUsc.ascx.cs">
+      <DependentUpon>ChartsUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Common\Charts\ChartsUsc.ascx.designer.cs">
+      <DependentUpon>ChartsUsc.ascx</DependentUpon>
     </Compile>
     <Compile Include="Components\Common\CheckBoxUsc.ascx.cs">
       <DependentUpon>CheckBoxUsc.ascx</DependentUpon>
@@ -389,19 +399,26 @@
     <Compile Include="Components\Common\CheckBoxUsc.ascx.designer.cs">
       <DependentUpon>CheckBoxUsc.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Components\Common\ChosenUsc.ascx.cs">
+    <Compile Include="Components\Common\DropDown\ChosenUsc.ascx.cs">
       <DependentUpon>ChosenUsc.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Components\Common\ChosenUsc.ascx.designer.cs">
+    <Compile Include="Components\Common\DropDown\ChosenUsc.ascx.designer.cs">
       <DependentUpon>ChosenUsc.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Components\Common\DropDownUsc.ascx.cs">
+    <Compile Include="Components\Common\DropDown\DropDownUsc.ascx.cs">
       <DependentUpon>DropDownUsc.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Components\Common\DropDownUsc.ascx.designer.cs">
+    <Compile Include="Components\Common\DropDown\DropDownUsc.ascx.designer.cs">
       <DependentUpon>DropDownUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Common\DropDown\SelectUsc.ascx.cs">
+      <DependentUpon>SelectUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Common\DropDown\SelectUsc.ascx.designer.cs">
+      <DependentUpon>SelectUsc.ascx</DependentUpon>
     </Compile>
     <Compile Include="Components\Common\Modal\ModalUsc.ascx.cs">
       <DependentUpon>ModalUsc.ascx</DependentUpon>
@@ -508,11 +525,11 @@
     <Compile Include="Components\TableStripedUsc.ascx.designer.cs">
       <DependentUpon>TableStripedUsc.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Components\Common\TextBoxUsc.ascx.cs">
+    <Compile Include="Components\Common\Text\TextBoxUsc.ascx.cs">
       <DependentUpon>TextBoxUsc.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Components\Common\TextBoxUsc.ascx.designer.cs">
+    <Compile Include="Components\Common\Text\TextBoxUsc.ascx.designer.cs">
       <DependentUpon>TextBoxUsc.ascx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
@@ -554,6 +571,13 @@
     </Compile>
     <Compile Include="Views\Colaborador\ColaboradorPge.aspx.designer.cs">
       <DependentUpon>ColaboradorPge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Colaborador\EtapaPge.aspx.cs">
+      <DependentUpon>EtapaPge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Colaborador\EtapaPge.aspx.designer.cs">
+      <DependentUpon>EtapaPge.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Error\404.aspx.cs">
       <DependentUpon>404.aspx</DependentUpon>

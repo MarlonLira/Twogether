@@ -7,18 +7,18 @@
 // </gerado automaticamente>
 //------------------------------------------------------------------------------
 
-namespace Twogether.Views.Colaborador {
+namespace Twogether.Components.Common.Button {
     
     
-    public partial class ColaboradorPge {
+    public partial class ButtonUsc {
         
         /// <summary>
-        /// Controle ChartsUsc.
+        /// Controle btn_control.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Common.Charts.ChartsUsc ChartsUsc;
+        protected global::System.Web.UI.WebControls.Button btn_control;
     }
 }

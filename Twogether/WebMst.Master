@@ -40,11 +40,11 @@
                     <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
                         <div class="header-top-menu">
                             <ul class="nav navbar-nav notika-top-nav">
-                                <usc:ButtonSearchUsc runat="server" ID="btn_Search_control"/>
-                                <usc:MsgDropdownUsc runat="server" ID="MsgDropdownUsc1"/>
-                                <usc:NotificationDropdownUsc runat="server" ID="NotificationDropdownUsc1"/>
-                                <usc:PercentDropdownUsc runat="server" ID="PercentDropdownUsc1"/>
-                                <usc:ChatDropdownUsc runat="server" ID="ChatDropdownUsc"/>
+                                <usc:ButtonSearchUsc runat="server" ID="btn_search_control"/>
+                                <usc:MsgDropdownUsc runat="server" ID="btn_msgDropdown_control"/>
+                                <usc:NotificationDropdownUsc runat="server" ID="btn_notificationDropdown_control"/>
+                                <usc:PercentDropdownUsc runat="server" ID="btn_percentDropdown_control"/>
+                                <usc:ChatDropdownUsc runat="server" ID="btn_chatDropdown_control"/>
                             </ul>
                         </div>
                     </div>

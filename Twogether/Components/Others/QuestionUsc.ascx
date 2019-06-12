@@ -8,7 +8,7 @@
         <div class="form-example-int form-horizental mg-t-15">
             <div class="row">
                 <usc:RadioButtonUsc runat="server" ID="rb_control" Titles="Sim/Não"/>
-            </div>
+            </div>            
         </div>
     </div>
 </asp:Panel>
