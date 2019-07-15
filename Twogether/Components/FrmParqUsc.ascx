@@ -24,6 +24,7 @@
                 <usc:QuestionUsc runat="server" ID="QuestionUsc2" NumQuestion="10"/>
             </div>
         </div>
+        <usc:ButtonUsc runat="server" ID="btn_confirmar" Title="Salvar"/>
     </div>
 </div>
 </asp:Panel>

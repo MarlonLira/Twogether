@@ -112,7 +112,9 @@ namespace Twogether {
                             "~/Content/responsive.css",
                             "~/Content/jquery.dataTables.min.css",
                             "~/Content/dialog/sweetalert2.min.css",
-                            "~/Content/dialog/dialog.css"                            
+                            "~/Content/dialog/dialog.css",
+                            "~/Content/chosen/chosen.css",
+                            "~/Content/bootstrap-select/bootstrap-select.css"
                             ).IncludeDirectory("~/Content", ".css"));
 
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(

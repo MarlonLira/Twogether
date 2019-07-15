@@ -110,5 +110,14 @@ namespace Twogether.Components {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::Twogether.Components.Others.QuestionUsc QuestionUsc2;
+        
+        /// <summary>
+        /// Controle btn_confirmar.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::Twogether.Components.Common.Button.ButtonUsc btn_confirmar;
     }
 }

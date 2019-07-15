@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Web.UI;
 using Twogether.Components.Common;
+using Twogether.Components.Common.Button;
 
 namespace Twogether {
     public partial class WebMst : MasterPage {
 
         public ButtonSearchUsc btnSearch {
             get {
-                return this.ButtonSearchUsc1;
+                return this.btn_search_control;
             }
         }
 
@@ -18,16 +19,6 @@ namespace Twogether {
             /*if (Global.Funcionario == null & Global.Aluno == null) {
                 Response.Redirect("~/LoginPge.aspx", false);
             }*/
-
-            //ScriptManager.RegisterStartupScript(this, this.GetType(), "myModalnine", "$(function(){$('#myModalnine').modal('show');})", true);
-        }
-
-        public void CatchChild(String Title, String Text) {
-            /*ModalUsc modal = new ModalUsc();
-            modal.Attributes.Add("Title", Title);
-            modal.Attributes.Add("Text", Text);*/
-
-            //ScriptManager.RegisterStartupScript(this, this.GetType(), "myModalnine", "$(function(){$('#myModalnine').modal('show');})", true);
         }
     }
 }

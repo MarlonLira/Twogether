@@ -19,7 +19,7 @@ namespace Twogether.Components {
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Common.TextBoxUsc txt_imc;
+        protected global::Twogether.Components.Common.Text.TextBoxUsc txt_imc;
         
         /// <summary>
         /// Controle txt_gordura.
@@ -28,7 +28,7 @@ namespace Twogether.Components {
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Common.TextBoxUsc txt_gordura;
+        protected global::Twogether.Components.Common.Text.TextBoxUsc txt_gordura;
         
         /// <summary>
         /// Controle txt_massa.
@@ -37,7 +37,7 @@ namespace Twogether.Components {
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Common.TextBoxUsc txt_massa;
+        protected global::Twogether.Components.Common.Text.TextBoxUsc txt_massa;
         
         /// <summary>
         /// Controle txt_metabolismo.
@@ -46,7 +46,7 @@ namespace Twogether.Components {
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Common.TextBoxUsc txt_metabolismo;
+        protected global::Twogether.Components.Common.Text.TextBoxUsc txt_metabolismo;
         
         /// <summary>
         /// Controle txt_biologica.
@@ -55,7 +55,7 @@ namespace Twogether.Components {
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Common.TextBoxUsc txt_biologica;
+        protected global::Twogether.Components.Common.Text.TextBoxUsc txt_biologica;
         
         /// <summary>
         /// Controle txt_visceral.
@@ -64,7 +64,7 @@ namespace Twogether.Components {
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Common.TextBoxUsc txt_visceral;
+        protected global::Twogether.Components.Common.Text.TextBoxUsc txt_visceral;
         
         /// <summary>
         /// Controle txt_peso.
@@ -73,7 +73,7 @@ namespace Twogether.Components {
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Common.TextBoxUsc txt_peso;
+        protected global::Twogether.Components.Common.Text.TextBoxUsc txt_peso;
         
         /// <summary>
         /// Controle txt_altura.
@@ -82,7 +82,7 @@ namespace Twogether.Components {
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Common.TextBoxUsc txt_altura;
+        protected global::Twogether.Components.Common.Text.TextBoxUsc txt_altura;
         
         /// <summary>
         /// Controle btn_confirmar.
@@ -91,6 +91,6 @@ namespace Twogether.Components {
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Common.ButtonUsc btn_confirmar;
+        protected global::Twogether.Components.Common.Button.ButtonUsc btn_confirmar;
     }
 }

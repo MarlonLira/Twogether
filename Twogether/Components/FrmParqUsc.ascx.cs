@@ -1,29 +1,29 @@
 ﻿using System;
 using System.Web.UI;
+using Twogether.Components.Common.Button;
 
 namespace Twogether.Components {
     public partial class FrmParqUsc : UserControl {
         protected void Page_Load(object sender, EventArgs e) {
-            LoadNext();
-        }
-        Int16 num = 0;
 
-        public String Next { get; set; }
+            btn_confirmar.OnSelect += new ButtonUsc.OnSelectEvent(btn_confirmar_click);
 
-        public String GetNext() {
-            num++;
-            Session.Add("num", num);
-
-            return "perg" + (Int16)Session["num"];
         }
 
-        public void LoadNext() {
-            if (String.IsNullOrEmpty(Next)) {
-                Next = "#perg1";
-            }else if (Next == "#perg1") {
-                Next = "#perg2";
+       
+
+        protected void btn_confirmar_click() {
+            object UrlAction = "";
+            try {
+                
+                if (UrlAction != DBNull.Value) {
+                    if (!String.IsNullOrEmpty(Convert.ToString(UrlAction))) {
+                        
+                    }
+                }
+            } catch (Exception Except) {
+                
             }
         }
-
     }
 }

@@ -6,13 +6,7 @@
     <div role="menu" class="dropdown-menu search-dd animated flipInX">
         <div class="search-input">
             <i class="notika-icon notika-left-arrow"></i>
-            <asp:TextBox ID="txt_control" runat="server" OnTextChanged="txt_control_TextChanged"></asp:TextBox>
-            <usc:ModalUsc runat="server" ID="ModalUsc1"/>
+            <asp:TextBox ID="txt_control" runat="server"></asp:TextBox>
         </div>
     </div>
 </li>
-
-
-
-
-

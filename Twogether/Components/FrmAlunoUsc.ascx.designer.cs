@@ -37,7 +37,7 @@ namespace Twogether.Components {
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Common.TextBoxUsc txt_nome;
+        protected global::Twogether.Components.Common.Text.TextBoxUsc txt_nome;
         
         /// <summary>
         /// Controle txt_email.
@@ -46,7 +46,7 @@ namespace Twogether.Components {
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Common.TextBoxUsc txt_email;
+        protected global::Twogether.Components.Common.Text.TextBoxUsc txt_email;
         
         /// <summary>
         /// Controle txt_phone.
@@ -55,7 +55,7 @@ namespace Twogether.Components {
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Common.TextBoxUsc txt_phone;
+        protected global::Twogether.Components.Common.Text.TextBoxUsc txt_phone;
         
         /// <summary>
         /// Controle txt_idade.
@@ -64,7 +64,7 @@ namespace Twogether.Components {
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Common.TextBoxUsc txt_idade;
+        protected global::Twogether.Components.Common.Text.TextBoxUsc txt_idade;
         
         /// <summary>
         /// Controle txt_sexo.
@@ -73,7 +73,7 @@ namespace Twogether.Components {
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Common.TextBoxUsc txt_sexo;
+        protected global::Twogether.Components.Common.Text.TextBoxUsc txt_sexo;
         
         /// <summary>
         /// Controle txt_data.
@@ -82,7 +82,7 @@ namespace Twogether.Components {
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Common.TextBoxUsc txt_data;
+        protected global::Twogether.Components.Common.Text.TextBoxUsc txt_data;
         
         /// <summary>
         /// Controle btn_control.
@@ -91,6 +91,6 @@ namespace Twogether.Components {
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Common.ButtonUsc btn_control;
+        protected global::Twogether.Components.Common.Button.ButtonUsc btn_control;
     }
 }

@@ -37,7 +37,7 @@ namespace Twogether.Components {
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Common.TextBoxUsc txt_nome;
+        protected global::Twogether.Components.Common.Text.TextBoxUsc txt_nome;
         
         /// <summary>
         /// Controle txt_matricula.
@@ -46,7 +46,7 @@ namespace Twogether.Components {
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Common.TextBoxUsc txt_matricula;
+        protected global::Twogether.Components.Common.Text.TextBoxUsc txt_matricula;
         
         /// <summary>
         /// Controle btn_control.
@@ -55,6 +55,6 @@ namespace Twogether.Components {
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Twogether.Components.Common.ButtonUsc btn_control;
+        protected global::Twogether.Components.Common.Button.ButtonUsc btn_control;
     }
 }
