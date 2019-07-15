@@ -16,7 +16,6 @@ namespace Twogether.Components.Common.Table {
         }
         */
 
-<<<<<<< HEAD
         private String[] ColunasArray {
             get {
                 return this.ColunasArray = Colunas.Split('/');
@@ -33,14 +32,9 @@ namespace Twogether.Components.Common.Table {
             //ltr_body_control.Visible = true;
             if (Scale <= 0) { Scale = 10; }
         }
-=======
-        /*
-       public void TableInit() {
-           ltr_body_control.Text = Help.TableLoad((DataTable)Session["Table"], true);
-           ltr_body_control.Visible = true;
-       }*/
+
         #endregion
->>>>>>> a3d2a3b2db906efb113479872e14972d68d07bd3
+
 
         public String [] Colunas { get; set; }
         public Int16 Scale { get; set; }

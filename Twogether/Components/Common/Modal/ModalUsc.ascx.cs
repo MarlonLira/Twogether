@@ -40,7 +40,6 @@ namespace Twogether.Components.Common.Modal {
 
                 try {
 
-<<<<<<< HEAD
                 ButtonSearchUsc btnSearch = ((WebMst)this.Page.Master).btnSearch;
                 if (btnSearch != null) {
                     DataTable TableAlu = null;
@@ -51,9 +50,9 @@ namespace Twogether.Components.Common.Modal {
                         IsTable = true;
                     }
                 }
-=======
+
                     if (btnSearch != null) {
->>>>>>> a3d2a3b2db906efb113479872e14972d68d07bd3
+
 
                         DataTable TableAlu = null;
                         btnSearch.Carregar(out TableAlu);

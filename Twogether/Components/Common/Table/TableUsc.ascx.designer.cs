@@ -22,9 +22,9 @@ namespace Twogether.Components.Common.Table {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl th_control;
         
         /// <summary>
-<<<<<<< HEAD
+
         /// Controle ltr_body_control.
-=======
+
         /// Controle tb_control.
         /// </summary>
         /// <remarks>
@@ -35,16 +35,16 @@ namespace Twogether.Components.Common.Table {
         
         /// <summary>
         /// Controle tf_control.
->>>>>>> a3d2a3b2db906efb113479872e14972d68d07bd3
+
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-<<<<<<< HEAD
+
         protected global::System.Web.UI.WebControls.Literal ltr_body_control;
-=======
+
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl tf_control;
->>>>>>> a3d2a3b2db906efb113479872e14972d68d07bd3
+
     }
 }
