@@ -8,7 +8,11 @@
             </div>
             <div class="modal-body">
                 <% if (this.IsTable) {%>
+<<<<<<< HEAD
                     <usc:TableUsc runat="server" ID="TableUsc" Scale="8" />
+=======
+                    <usc:TableUsc runat="server" ID="TableUsc" Scale="8"/>
+>>>>>>> a3d2a3b2db906efb113479872e14972d68d07bd3
                 <%} %>
 
                 <h2><asp:Label ID="lbl_title_control" runat="server"></asp:Label></h2>

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Data;
 using System.Web.UI;
+using Twogether.Components.Common.Button;
+using Twogether.Helpers;
 
 namespace Twogether.Components.Common.Modal {
     public partial class ModalUsc : UserControl {
@@ -26,38 +28,19 @@ namespace Twogether.Components.Common.Modal {
             }
         }
 
-        public Boolean IsTable {
-            get {
-                Object Result = Session["IsTable"];
-                if (Result == null) {
-                    Result = false;
-                }
-                return Convert.ToBoolean(Result);
-            }
-            set {
-                Session["IsTable"] = value;
-            }
-        }
+        public Boolean IsTable { get; set; }
 
         public Boolean IsError { get; set; }
 
 
-        public void LoadModal() {
+        public void LoadModal(String msg = "") {
+            ButtonSearchUsc btnSearch = ((WebMst)this.Page.Master).btnSearch;
 
-            Boolean UseSearchEvent = IsPostBack;
+            if (IsPostBack && !String.IsNullOrEmpty(btnSearch.TextSearch)) {
 
-            Response.Write(@"<b style='color: white'>" + Convert.ToString(UseSearchEvent) + @"</b>");
+                try {
 
-            /*
-            if (!String.IsNullOrEmpty(Request.Params["__EVENTTARGET"])) {
-                if (Request.Params["__EVENTTARGET"].IndexOf("", StringComparison.InvariantCultureIgnoreCase) > -1) {
-                    UseSearchEvent = true;
-
-                }
-            }
-            */
-            if (UseSearchEvent) {
-
+<<<<<<< HEAD
                 ButtonSearchUsc btnSearch = ((WebMst)this.Page.Master).btnSearch;
                 if (btnSearch != null) {
                     DataTable TableAlu = null;
@@ -68,25 +51,36 @@ namespace Twogether.Components.Common.Modal {
                         IsTable = true;
                     }
                 }
+=======
+                    if (btnSearch != null) {
+>>>>>>> a3d2a3b2db906efb113479872e14972d68d07bd3
 
+                        DataTable TableAlu = null;
+                        btnSearch.Carregar(out TableAlu);
+
+                        if (TableAlu != null) {
+
+                            if (TableAlu != null && TableAlu.Rows.Count > 0) {
+
+                                TableUsc.Colunas = new String[] {
+                                    "Codigo",
+                                    "Nome",
+                                    "Telefone"
+                                };
+                                TableUsc.LoadDataSource(Help.TableFormat(TableUsc.Colunas, TableAlu));
+                                IsTable = true;
+                            }
+                            ScriptManager.RegisterStartupScript(this, this.GetType(), "ModalUsc", "$(function(){$('#ModalUsc').modal('show');})", true);
+                        }
+                    }
+                    
+                } catch (Exception Err) {
+                    btn_save_modal.Visible = false;
+                    this.Title = "Error";
+                    this.Text = Err.Message;
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "ModalUsc", "$(function(){$('#ModalUsc').modal('show');})", true);
+                } 
             }
-            /*
-                if (Session["IsTable"] != null) {
-
-                    IsTable = (Boolean)Session["IsTable"];
-
-                } else {
-                    IsTable = false;
-                }
-                */
-
-            if (Session["IsErro"] != null) {
-                IsError = (Boolean)Session["IsErro"];
-                btn_save_modal.Visible = false;
-            }
-
-
         }
-
     }
 }
