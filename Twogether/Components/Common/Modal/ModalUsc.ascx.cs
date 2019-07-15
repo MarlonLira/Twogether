@@ -63,7 +63,6 @@ namespace Twogether.Components.Common.Modal {
                     DataTable TableAlu = null;
                     btnSearch.Carregar(out TableAlu);
                     if (TableAlu != null && TableAlu.Rows.Count > 0) {
-                        TableUsc.Colunas = "Codigo/Nome/Telefone";
                         TableUsc.LoadDataSource(TableAlu);
                         ScriptManager.RegisterStartupScript(this, this.GetType(), "ModalUsc", "$(function(){$('#ModalUsc').modal('show');})", true);
                         IsTable = true;

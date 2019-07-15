@@ -26,9 +26,9 @@ namespace Twogether.Components.Common.Table {
         } 
 
         public void LoadDataSource(DataTable TableAux) {
-            ltr_head_control.Text = Help.TableLoad(ColunasArray, true);
+            //ltr_head_control.Text = Help.TableLoad(ColunasArray, true);
             ltr_body_control.Text = Help.TableLoad(TableAux, true);
-            ltr_foot_control.Text = Help.TableLoad(ColunasArray, true);
+            //ltr_foot_control.Text = Help.TableLoad(ColunasArray, true);
             //ltr_body_control.Visible = true;
             if (Scale <= 0) { Scale = 10; }
         }

@@ -23,6 +23,7 @@
         <%: Styles.Render("~/bundles/css") %>
         <%: Scripts.Render("~/bundles/modernizr") %>
         <%: Scripts.Render("~/bundles/wizard") %>
+        <%: Scripts.Render("~/bundles/datatable") %>
 
 </head>
 <body style="background-color:lightgrey">

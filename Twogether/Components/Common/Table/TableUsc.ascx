@@ -3,31 +3,27 @@
 
 <div class="data-table-area">
     <div class="container">
-        <div class="row success">
+        <div class="row ">
             <div class="col-lg-<%=Scale%> col-md-<%=Scale%> col-sm-<%=Scale%> col-xs-<%=Scale * 3%> ">
-                <div class="data-table-list success">
+                <div class="data-table-list">
                     <div class="table-responsive">
-                        <table id="data-table-basic" class="table table-striped table table-cl">
+                        <table id="data-table-basic" class="table table-striped">
                             <thead id="th_control" runat="server">
-                                <!--<tr>
+                                <tr>
                                     <th>Codigo</th>
                                     <th>Nome</th>
                                     <th>Telefone</th>
-                                </tr>-->
-                                <asp:Literal ID="ltr_head_control" runat="server"></asp:Literal>
+                                </tr>
                             </thead>
                             <tbody>
                                 <asp:Literal ID="ltr_body_control" runat="server"></asp:Literal>
                             </tbody>
                             <tfoot>
-                                <asp:Literal ID="ltr_foot_control" runat="server"></asp:Literal>
-                                
-                                <!--<tr>
+                                <tr>
                                     <th>Codigo</th>
                                     <th>Nome</th>
                                     <th>Telefone</th>
-                                </tr>-->
-
+                                </tr>
                             </tfoot>
                         </table> 
                     </div>
@@ -36,4 +32,3 @@
         </div>
     </div>
 </div>
-<%: Scripts.Render("~/bundles/datatable") %>
